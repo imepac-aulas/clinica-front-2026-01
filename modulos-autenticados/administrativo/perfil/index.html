@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt-BR">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Perfil | Administrativo | Clinica Vida Plena</title>
+	<link rel="stylesheet" href="../../../assets/vendor/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../../assets/css/modules.css">
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top app-navbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-menu" aria-expanded="false">
+					<span class="sr-only">Alternar navegacao</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../../index.html">Clinica Vida Plena</a>
+			</div>
+			<div class="collapse navbar-collapse" id="app-navbar-menu">
+				<ul class="nav navbar-nav">
+					<li><a href="../../index.html">Area Logada</a></li>
+					<li class="active"><a href="index.html">Administrativo / Perfil</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Usuario: Demo</a></li>
+					<li><a href="../../../index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid app-shell">
+		<div class="row">
+			<div class="col-md-3 col-lg-2">
+				<div class="app-sidebar">
+					<h2 class="app-sidebar-title">Administrativo</h2>
+					<ul class="nav nav-pills nav-stacked">
+						<li><a href="../../index.html"><span class="glyphicon glyphicon-home"></span> Pagina logada</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-briefcase"></span> Convenios</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-plus-sign"></span> Especialidades</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-user"></span> Funcionarios</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-heart"></span> Medicos</a></li>
+						<li class="active"><a href="index.html"><span class="glyphicon glyphicon-lock"></span> Perfil</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-md-9 col-lg-10">
+				<div class="breadcrumb-wrap">
+					<ol class="breadcrumb">
+						<li><a href="../../index.html">Area Logada</a></li>
+						<li><a href="../../index.html">Administrativo</a></li>
+						<li class="active">Perfil</li>
+					</ol>
+				</div>
+
+				<div class="page-hero">
+					<h1>Gestao de Perfis de Acesso</h1>
+					<p>Este conjunto de telas foi montado como modelo didatico para os demais cadastros do sistema, seguindo um padrao Bootstrap 3 com navegacao clara, cards de acao e formularios bem organizados.</p>
+				</div>
+
+				<div class="row stat-grid">
+					<div class="col-sm-4">
+						<div class="stat-card">
+							<strong>08</strong>
+							<span>Perfis Cadastrados</span>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="stat-card">
+							<strong>03</strong>
+							<span>Perfis Administrativos</span>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="stat-card">
+							<strong>12</strong>
+							<span>Usuarios Vinculados</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 col-lg-3">
+						<a class="action-card" href="cadastro.html">
+							<span class="glyphicon glyphicon-plus-sign"></span>
+							<h3>Cadastrar Perfil</h3>
+							<p>Formulario completo para criar um novo perfil de acesso com nome, descricao, nivel e escopo inicial.</p>
+							<span class="text-link">Abrir formulario</span>
+						</a>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<a class="action-card" href="lista.html">
+							<span class="glyphicon glyphicon-th-list"></span>
+							<h3>Listar Perfis</h3>
+							<p>Tela com filtros, tabela e acoes visuais para consulta dos perfis ja existentes.</p>
+							<span class="text-link">Ver listagem</span>
+						</a>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<a class="action-card" href="editar.html">
+							<span class="glyphicon glyphicon-pencil"></span>
+							<h3>Editar Perfil</h3>
+							<p>Modelo de edicao com dados preenchidos para demonstrar manutencao de perfis existentes.</p>
+							<span class="text-link">Abrir edicao</span>
+						</a>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<a class="action-card" href="permissoes.html">
+							<span class="glyphicon glyphicon-check"></span>
+							<h3>Definir Permissoes</h3>
+							<p>Matriz de permissoes por modulo e funcionalidade, pronta para ser replicada nos demais fluxos.</p>
+							<span class="text-link">Configurar acessos</span>
+						</a>
+					</div>
+				</div>
+
+				<div class="content-card">
+					<h2 class="content-card-title">Padrao visual adotado</h2>
+					<div class="row">
+						<div class="col-md-4">
+							<p><span class="module-badge">Layout</span> Barra superior, breadcrumb, menu lateral e area principal em cards.</p>
+						</div>
+						<div class="col-md-4">
+							<p><span class="module-badge">Formulario</span> Campos agrupados por secoes, ajuda textual curta e acoes no rodape.</p>
+						</div>
+						<div class="col-md-4">
+							<p><span class="module-badge">Tabela</span> Filtros acima, tabela limpa e botoes de acao por linha.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../../assets/vendor/js/bootstrap.min.js"></script>
+</body>
+</html>

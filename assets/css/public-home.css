@@ -1,0 +1,68 @@
+body {
+	background: #f6f9fc;
+	color: #2b3e50;
+	padding-top: 70px;
+}
+
+.hero {
+	background: linear-gradient(135deg, #0e6ba8 0%, #13a8a8 100%);
+	color: #fff;
+	padding: 70px 0;
+	margin-bottom: 30px;
+}
+
+.hero h1 {
+	font-size: 42px;
+	margin-bottom: 18px;
+	font-weight: 700;
+}
+
+.hero p {
+	font-size: 18px;
+	line-height: 1.7;
+	max-width: 720px;
+}
+
+.section-title {
+	margin-bottom: 25px;
+	font-weight: 700;
+	color: #0e6ba8;
+}
+
+.feature-box {
+	background: #fff;
+	border: 1px solid #dce7f0;
+	border-radius: 6px;
+	padding: 22px;
+	min-height: 180px;
+	margin-bottom: 20px;
+}
+
+.feature-box h4 {
+	margin-top: 0;
+	color: #126ea3;
+	font-weight: 700;
+}
+
+.about {
+	background: #fff;
+	border: 1px solid #dce7f0;
+	border-radius: 6px;
+	padding: 25px;
+	margin-bottom: 40px;
+}
+
+.footer {
+	background: #12344d;
+	color: #d2e2ef;
+	padding: 20px 0;
+	margin-top: 30px;
+}
+
+.navbar-brand {
+	font-weight: 700;
+}
+
+.navbar-form .form-control {
+	width: 150px;
+}
