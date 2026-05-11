@@ -1,0 +1,517 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt-BR">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Listar Funcionarios | Administrativo | Clinica Vida Plena</title>
+
+	<link rel="stylesheet" href="../../../assets/vendor/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../../assets/css/modules.css">
+
+</head>
+
+<body>
+
+	<!-- NAVBAR -->
+	<div class="navbar navbar-default navbar-fixed-top app-navbar">
+
+		<div class="container-fluid">
+
+			<div class="navbar-header">
+
+				<button type="button"
+						class="navbar-toggle collapsed"
+						data-toggle="collapse"
+						data-target="#app-navbar-menu">
+
+					<span class="sr-only">Alternar navegacao</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+
+				</button>
+
+				<a class="navbar-brand" href="../../index.html">
+					Clinica Vida Plena
+				</a>
+
+			</div>
+
+			<div class="collapse navbar-collapse" id="app-navbar-menu">
+
+				<ul class="nav navbar-nav">
+
+					<li>
+						<a href="../../index.html">Area Logada</a>
+					</li>
+
+					<li>
+						<a href="index.html">Administrativo / Funcionarios</a>
+					</li>
+
+					<li class="active">
+						<a href="lista.html">Listar</a>
+					</li>
+
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+
+					<li>
+						<a href="#">
+							<span class="glyphicon glyphicon-user"></span>
+							Usuario: Demo
+						</a>
+					</li>
+
+					<li>
+						<a href="../../../index.html">
+							<span class="glyphicon glyphicon-log-out"></span>
+							Logout
+						</a>
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- CONTEUDO -->
+	<div class="container-fluid app-shell">
+
+		<div class="row">
+
+			<!-- SIDEBAR -->
+			<div class="col-md-3 col-lg-2">
+
+				<div class="app-sidebar">
+
+					<h2 class="app-sidebar-title">
+						Funcionarios
+					</h2>
+
+					<ul class="nav nav-pills nav-stacked">
+
+						<li>
+							<a href="index.html">Visao geral</a>
+						</li>
+
+						<li>
+							<a href="cadastro.html">Cadastrar funcionario</a>
+						</li>
+
+						<li class="active">
+							<a href="lista.html">Listar funcionarios</a>
+						</li>
+
+						<li>
+							<a href="editar.html">Editar funcionario</a>
+						</li>
+
+						<li>
+							<a href="vincular.html">Vincular perfil</a>
+						</li>
+
+					</ul>
+
+				</div>
+
+			</div>
+
+			<!-- AREA PRINCIPAL -->
+			<div class="col-md-9 col-lg-10">
+
+				<!-- BREADCRUMB -->
+				<div class="breadcrumb-wrap">
+
+					<ol class="breadcrumb">
+
+						<li>
+							<a href="../../index.html">Area Logada</a>
+						</li>
+
+						<li>
+							<a href="index.html">Funcionarios</a>
+						</li>
+
+						<li class="active">
+							Listar funcionarios
+						</li>
+
+					</ol>
+
+				</div>
+
+				<!-- HERO -->
+				<div class="page-hero">
+
+					<h1>Lista de Funcionarios</h1>
+
+					<p>
+						Consulta geral de funcionarios cadastrados,
+						com filtros de busca, controle de status
+						e acesso rapido para edicao.
+					</p>
+
+				</div>
+
+				<!-- FILTROS -->
+				<div class="content-card">
+
+					<h2 class="form-section-title">
+						Filtros de pesquisa
+					</h2>
+
+					<div class="row">
+
+						<div class="col-md-4">
+
+							<div class="form-group">
+
+								<label for="buscarNome">
+									Nome do funcionario
+								</label>
+
+								<input type="text"
+									   class="form-control"
+									   id="buscarNome"
+									   placeholder="Digite o nome">
+
+							</div>
+
+						</div>
+
+						<div class="col-md-3">
+
+							<div class="form-group">
+
+								<label for="buscarCpf">
+									CPF
+								</label>
+
+								<input type="text"
+									   class="form-control"
+									   id="buscarCpf"
+									   placeholder="000.000.000-00">
+
+							</div>
+
+						</div>
+
+						<div class="col-md-3">
+
+							<div class="form-group">
+
+								<label for="buscarStatus">
+									Status
+								</label>
+
+								<select class="form-control"
+										id="buscarStatus">
+
+									<option>Todos</option>
+									<option>Ativo</option>
+									<option>Inativo</option>
+
+								</select>
+
+							</div>
+
+						</div>
+
+						<div class="col-md-2">
+
+							<div class="form-group">
+
+								<label>&nbsp;</label>
+
+								<button class="btn btn-primary btn-block"
+										id="btnPesquisar">
+
+									<span class="glyphicon glyphicon-search"></span>
+									Pesquisar
+
+								</button>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<!-- TABELA -->
+				<div class="content-card">
+
+					<div class="clearfix">
+
+						<h2 class="form-section-title pull-left">
+							Funcionarios cadastrados
+						</h2>
+
+						<a href="cadastro.html"
+						   class="btn btn-success pull-right">
+
+							<span class="glyphicon glyphicon-plus"></span>
+							Novo funcionario
+
+						</a>
+
+					</div>
+
+					<div class="table-responsive">
+
+						<table class="table table-bordered table-hover">
+
+							<thead>
+
+								<tr>
+
+									<th>ID</th>
+									<th>Nome</th>
+									<th>CPF</th>
+									<th>Cargo</th>
+									<th>Setor</th>
+									<th>Status</th>
+									<th width="220">Acoes</th>
+
+								</tr>
+
+							</thead>
+
+							<tbody id="tabelaFuncionarios">
+
+								<tr>
+
+									<td>1</td>
+									<td>Carlos Henrique Silva</td>
+									<td>123.456.789-00</td>
+									<td>Recepcionista</td>
+									<td>Recepcao</td>
+
+									<td>
+										<span class="label label-success">
+											Ativo
+										</span>
+									</td>
+
+									<td>
+
+										<a href="editar.html"
+										   class="btn btn-primary btn-sm">
+
+											<span class="glyphicon glyphicon-pencil"></span>
+											Editar
+
+										</a>
+
+										<button class="btn btn-warning btn-sm btn-status">
+
+											<span class="glyphicon glyphicon-ban-circle"></span>
+											Inativar
+
+										</button>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>2</td>
+									<td>Mariana Costa</td>
+									<td>987.654.321-00</td>
+									<td>Auxiliar Administrativo</td>
+									<td>Administrativo</td>
+
+									<td>
+										<span class="label label-danger">
+											Inativo
+										</span>
+									</td>
+
+									<td>
+
+										<a href="editar.html"
+										   class="btn btn-primary btn-sm">
+
+											<span class="glyphicon glyphicon-pencil"></span>
+											Editar
+
+										</a>
+
+										<button class="btn btn-success btn-sm btn-status">
+
+											<span class="glyphicon glyphicon-ok-circle"></span>
+											Ativar
+
+										</button>
+
+									</td>
+
+								</tr>
+
+								<tr>
+
+									<td>3</td>
+									<td>Fernanda Souza</td>
+									<td>111.222.333-44</td>
+									<td>Financeiro</td>
+									<td>Financeiro</td>
+
+									<td>
+										<span class="label label-success">
+											Ativo
+										</span>
+									</td>
+
+									<td>
+
+										<a href="editar.html"
+										   class="btn btn-primary btn-sm">
+
+											<span class="glyphicon glyphicon-pencil"></span>
+											Editar
+
+										</a>
+
+										<button class="btn btn-warning btn-sm btn-status">
+
+											<span class="glyphicon glyphicon-ban-circle"></span>
+											Inativar
+
+										</button>
+
+									</td>
+
+								</tr>
+
+							</tbody>
+
+						</table>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- SCRIPTS -->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+	<script src="../../../assets/vendor/js/bootstrap.min.js"></script>
+
+	<script>
+
+		/*
+		=========================================
+		MASCARA CPF PESQUISA
+		=========================================
+		*/
+
+		$('#buscarCpf').on('input', function () {
+
+			let valor = $(this).val();
+
+			valor = valor.replace(/\D/g, '');
+
+			valor = valor.replace(/(\d{3})(\d)/, '$1.$2');
+			valor = valor.replace(/(\d{3})(\d)/, '$1.$2');
+
+			valor = valor.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+
+			$(this).val(valor);
+
+		});
+
+
+		/*
+		=========================================
+		BOTAO PESQUISAR
+		=========================================
+		*/
+
+		$('#btnPesquisar').on('click', function (e) {
+
+			e.preventDefault();
+
+			alert('Pesquisa realizada com sucesso!');
+
+		});
+
+
+		/*
+		=========================================
+		ATIVAR / INATIVAR
+		=========================================
+		*/
+
+		$('.btn-status').on('click', function () {
+
+			let botao = $(this);
+
+			/*
+			linha atual da tabela
+			*/
+			let linha = botao.closest('tr');
+
+			/*
+			coluna status
+			*/
+			let status = linha.find('td:eq(5) span');
+
+			/*
+			funcionario ativo
+			*/
+			if (botao.text().indexOf('Inativar') !== -1) {
+
+				status.removeClass('label-success');
+				status.addClass('label-danger');
+
+				status.text('Inativo');
+
+				botao.removeClass('btn-warning');
+				botao.addClass('btn-success');
+
+				botao.html(
+					'<span class="glyphicon glyphicon-ok-circle"></span> Ativar'
+				);
+
+			}
+
+			/*
+			funcionario inativo
+			*/
+			else {
+
+				status.removeClass('label-danger');
+				status.addClass('label-success');
+
+				status.text('Ativo');
+
+				botao.removeClass('btn-success');
+				botao.addClass('btn-warning');
+
+				botao.html(
+					'<span class="glyphicon glyphicon-ban-circle"></span> Inativar'
+				);
+
+			}
+
+		});
+
+	</script>
+
+</body>
+</html>

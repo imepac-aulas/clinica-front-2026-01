@@ -1,0 +1,498 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt-BR">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Vincular Perfil | Administrativo | Clinica Vida Plena</title>
+
+	<link rel="stylesheet" href="../../../assets/vendor/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../../assets/css/modules.css">
+
+</head>
+
+<body>
+
+	<!-- NAVBAR -->
+	<div class="navbar navbar-default navbar-fixed-top app-navbar">
+
+		<div class="container-fluid">
+
+			<div class="navbar-header">
+
+				<button type="button"
+						class="navbar-toggle collapsed"
+						data-toggle="collapse"
+						data-target="#app-navbar-menu">
+
+					<span class="sr-only">Alternar navegacao</span>
+
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+
+				</button>
+
+				<a class="navbar-brand" href="../../index.html">
+					Clinica Vida Plena
+				</a>
+
+			</div>
+
+			<div class="collapse navbar-collapse" id="app-navbar-menu">
+
+				<ul class="nav navbar-nav">
+
+					<li>
+						<a href="../../index.html">Area Logada</a>
+					</li>
+
+					<li>
+						<a href="index.html">
+							Administrativo / Funcionarios
+						</a>
+					</li>
+
+					<li class="active">
+						<a href="vincular.html">
+							Vincular perfil
+						</a>
+					</li>
+
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+
+					<li>
+						<a href="#">
+							<span class="glyphicon glyphicon-user"></span>
+							Usuario: Demo
+						</a>
+					</li>
+
+					<li>
+						<a href="../../../index.html">
+							<span class="glyphicon glyphicon-log-out"></span>
+							Logout
+						</a>
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- CONTEUDO -->
+	<div class="container-fluid app-shell">
+
+		<div class="row">
+
+			<!-- SIDEBAR -->
+			<div class="col-md-3 col-lg-2">
+
+				<div class="app-sidebar">
+
+					<h2 class="app-sidebar-title">
+						Funcionarios
+					</h2>
+
+					<ul class="nav nav-pills nav-stacked">
+
+						<li>
+							<a href="index.html">Visao geral</a>
+						</li>
+
+						<li>
+							<a href="cadastro.html">
+								Cadastrar funcionario
+							</a>
+						</li>
+
+						<li>
+							<a href="lista.html">
+								Listar funcionarios
+							</a>
+						</li>
+
+						<li>
+							<a href="editar.html">
+								Editar funcionario
+							</a>
+						</li>
+
+						<li class="active">
+							<a href="vincular.html">
+								Vincular perfil
+							</a>
+						</li>
+
+					</ul>
+
+				</div>
+
+			</div>
+
+			<!-- AREA PRINCIPAL -->
+			<div class="col-md-9 col-lg-10">
+
+				<!-- BREADCRUMB -->
+				<div class="breadcrumb-wrap">
+
+					<ol class="breadcrumb">
+
+						<li>
+							<a href="../../index.html">
+								Area Logada
+							</a>
+						</li>
+
+						<li>
+							<a href="index.html">
+								Funcionarios
+							</a>
+						</li>
+
+						<li class="active">
+							Vincular perfil
+						</li>
+
+					</ol>
+
+				</div>
+
+				<!-- HERO -->
+				<div class="page-hero">
+
+					<h1>Vincular Funcionario a Perfil</h1>
+
+					<p>
+						Associacao de funcionarios aos
+						perfis de acesso do sistema,
+						controlando permissoes e niveis
+						de utilizacao da plataforma.
+					</p>
+
+				</div>
+
+				<form id="form-vinculo">
+
+					<!-- VINCULO -->
+					<div class="content-card">
+
+						<h2 class="form-section-title">
+							Dados do vinculo
+						</h2>
+
+						<div class="row">
+
+							<div class="col-md-6">
+
+								<div class="form-group">
+
+									<label for="funcionario">
+										Funcionario
+									</label>
+
+									<select class="form-control"
+											id="funcionario">
+
+										<option value="">
+											Selecione o funcionario
+										</option>
+
+										<option>
+											Carlos Henrique Silva
+										</option>
+
+										<option>
+											Mariana Costa
+										</option>
+
+										<option>
+											Fernanda Souza
+										</option>
+
+									</select>
+
+								</div>
+
+							</div>
+
+							<div class="col-md-6">
+
+								<div class="form-group">
+
+									<label for="perfil">
+										Perfil de acesso
+									</label>
+
+									<select class="form-control"
+											id="perfil">
+
+										<option value="">
+											Selecione o perfil
+										</option>
+
+										<option>
+											Administrador
+										</option>
+
+										<option>
+											Recepcao
+										</option>
+
+										<option>
+											Financeiro
+										</option>
+
+										<option>
+											Atendimento
+										</option>
+
+									</select>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="row">
+
+							<div class="col-md-4">
+
+								<div class="form-group">
+
+									<label for="nivel">
+										Nivel de permissao
+									</label>
+
+									<select class="form-control"
+											id="nivel">
+
+										<option>
+											Basico
+										</option>
+
+										<option>
+											Intermediario
+										</option>
+
+										<option>
+											Avancado
+										</option>
+
+										<option>
+											Administrativo
+										</option>
+
+									</select>
+
+								</div>
+
+							</div>
+
+							<div class="col-md-4">
+
+								<div class="form-group">
+
+									<label for="statusVinculo">
+										Status do vinculo
+									</label>
+
+									<select class="form-control"
+											id="statusVinculo">
+
+										<option>
+											Ativo
+										</option>
+
+										<option>
+											Inativo
+										</option>
+
+									</select>
+
+								</div>
+
+							</div>
+
+							<div class="col-md-4">
+
+								<div class="form-group">
+
+									<label for="dataVinculo">
+										Data do vinculo
+									</label>
+
+									<input type="date"
+										   class="form-control"
+										   id="dataVinculo">
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="form-group">
+
+							<label for="observacoes">
+								Observacoes
+							</label>
+
+							<textarea class="form-control"
+									  id="observacoes"
+									  rows="4"
+									  placeholder="Digite observacoes relacionadas ao perfil e permissoes do funcionario"></textarea>
+
+						</div>
+
+					</div>
+
+					<!-- INFORMACOES -->
+					<div class="content-card">
+
+						<h2 class="form-section-title">
+							Informacoes do acesso
+						</h2>
+
+						<div class="alert alert-info">
+
+							<strong>Aviso:</strong>
+
+							O perfil vinculado define quais
+							modulos e funcionalidades o
+							funcionario podera acessar dentro
+							do sistema da clinica.
+
+						</div>
+
+						<div class="row">
+
+							<div class="col-md-4">
+
+								<div class="well">
+
+									<h4>Administrador</h4>
+
+									<p>
+										Acesso completo aos modulos
+										do sistema.
+									</p>
+
+								</div>
+
+							</div>
+
+							<div class="col-md-4">
+
+								<div class="well">
+
+									<h4>Recepcao</h4>
+
+									<p>
+										Controle de pacientes,
+										consultas e agenda.
+									</p>
+
+								</div>
+
+							</div>
+
+							<div class="col-md-4">
+
+								<div class="well">
+
+									<h4>Atendimento</h4>
+
+									<p>
+										Acesso ao prontuario
+										e historico clinico.
+									</p>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="form-actions clearfix">
+
+							<a href="index.html"
+							   class="btn btn-default">
+
+								Cancelar
+
+							</a>
+
+							<button type="submit"
+									class="btn btn-primary pull-right">
+
+								Salvar vinculo
+
+							</button>
+
+						</div>
+
+					</div>
+
+				</form>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- SCRIPTS -->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+	<script src="../../../assets/vendor/js/bootstrap.min.js"></script>
+
+	<script>
+
+		/*
+		=========================================
+		VALIDACAO FORMULARIO
+		=========================================
+		*/
+
+		$('#form-vinculo').on('submit', function (e) {
+
+			e.preventDefault();
+
+			let funcionario = $('#funcionario').val();
+			let perfil = $('#perfil').val();
+
+			/*
+			validacao simples
+			*/
+			if (funcionario === '' || perfil === '') {
+
+				alert(
+					'Selecione o funcionario e o perfil.'
+				);
+
+				return;
+
+			}
+
+			/*
+			simulacao salvamento
+			*/
+			alert(
+				'Perfil vinculado com sucesso!'
+			);
+
+		});
+
+	</script>
+
+</body>
+</html>

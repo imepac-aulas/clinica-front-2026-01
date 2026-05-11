@@ -1,0 +1,661 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt-BR">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Editar Funcionario | Administrativo | Clinica Vida Plena</title>
+
+	<link rel="stylesheet" href="../../../assets/vendor/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../../assets/css/modules.css">
+
+</head>
+
+<body>
+
+	<!-- NAVBAR -->
+	<div class="navbar navbar-default navbar-fixed-top app-navbar">
+
+		<div class="container-fluid">
+
+			<div class="navbar-header">
+
+				<button type="button"
+						class="navbar-toggle collapsed"
+						data-toggle="collapse"
+						data-target="#app-navbar-menu">
+
+					<span class="sr-only">Alternar navegacao</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+
+				</button>
+
+				<a class="navbar-brand" href="../../index.html">
+					Clinica Vida Plena
+				</a>
+
+			</div>
+
+			<div class="collapse navbar-collapse" id="app-navbar-menu">
+
+				<ul class="nav navbar-nav">
+
+					<li>
+						<a href="../../index.html">Area Logada</a>
+					</li>
+
+					<li>
+						<a href="index.html">Administrativo / Funcionarios</a>
+					</li>
+
+					<li class="active">
+						<a href="editar.html">Editar</a>
+					</li>
+
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+
+					<li>
+						<a href="#">
+							<span class="glyphicon glyphicon-user"></span>
+							Usuario: Demo
+						</a>
+					</li>
+
+					<li>
+						<a href="../../../index.html">
+							<span class="glyphicon glyphicon-log-out"></span>
+							Logout
+						</a>
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- CONTEUDO -->
+	<div class="container-fluid app-shell">
+
+		<div class="row">
+
+			<!-- SIDEBAR -->
+			<div class="col-md-3 col-lg-2">
+
+				<div class="app-sidebar">
+
+					<h2 class="app-sidebar-title">
+						Funcionarios
+					</h2>
+
+					<ul class="nav nav-pills nav-stacked">
+
+						<li>
+							<a href="index.html">Visao geral</a>
+						</li>
+
+						<li>
+							<a href="cadastro.html">Cadastrar funcionario</a>
+						</li>
+
+						<li>
+							<a href="lista.html">Listar funcionarios</a>
+						</li>
+
+						<li class="active">
+							<a href="editar.html">Editar funcionario</a>
+						</li>
+
+						<li>
+							<a href="vincular.html">Vincular perfil</a>
+						</li>
+
+					</ul>
+
+				</div>
+
+			</div>
+
+			<!-- AREA PRINCIPAL -->
+			<div class="col-md-9 col-lg-10">
+
+				<!-- BREADCRUMB -->
+				<div class="breadcrumb-wrap">
+
+					<ol class="breadcrumb">
+
+						<li>
+							<a href="../../index.html">Area Logada</a>
+						</li>
+
+						<li>
+							<a href="index.html">Funcionarios</a>
+						</li>
+
+						<li class="active">
+							Editar funcionario
+						</li>
+
+					</ol>
+
+				</div>
+
+				<!-- HERO -->
+				<div class="page-hero">
+
+					<h1>Editar Funcionario</h1>
+
+					<p>
+						Atualizacao de dados cadastrais,
+						contato, endereco e informacoes
+						profissionais do funcionario.
+					</p>
+
+				</div>
+
+				<form id="form-editar-funcionario">
+
+					<!-- DADOS PESSOAIS -->
+					<div class="content-card">
+
+						<h2 class="form-section-title">
+							Dados pessoais
+						</h2>
+
+						<div class="row">
+
+							<div class="col-md-6">
+
+								<div class="form-group">
+
+									<label for="nome">
+										Nome completo
+									</label>
+
+									<input type="text"
+										   class="form-control"
+										   id="nome"
+										   value="Carlos Henrique Silva">
+
+								</div>
+
+							</div>
+
+							<div class="col-md-3">
+
+								<div class="form-group">
+
+									<label for="cpf">CPF</label>
+
+									<input type="text"
+										   class="form-control"
+										   id="cpf"
+										   value="123.456.789-00">
+
+								</div>
+
+							</div>
+
+							<div class="col-md-3">
+
+								<div class="form-group">
+
+									<label for="rg">RG</label>
+
+									<input type="text"
+										   class="form-control"
+										   id="rg"
+										   value="MG-12.345.678">
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="row">
+
+							<div class="col-md-3">
+
+								<div class="form-group">
+
+									<label for="dataNascimento">
+										Data nascimento
+									</label>
+
+									<input type="date"
+										   class="form-control"
+										   id="dataNascimento"
+										   value="1995-08-10">
+
+								</div>
+
+							</div>
+
+							<div class="col-md-3">
+
+								<div class="form-group">
+
+									<label for="sexo">Sexo</label>
+
+									<select class="form-control" id="sexo">
+
+										<option>Selecione</option>
+										<option selected>Masculino</option>
+										<option>Feminino</option>
+
+									</select>
+
+								</div>
+
+							</div>
+
+							<div class="col-md-3">
+
+								<div class="form-group">
+
+									<label for="estadoCivil">
+										Estado civil
+									</label>
+
+									<select class="form-control" id="estadoCivil">
+
+										<option>Selecione</option>
+										<option selected>Casado</option>
+										<option>Solteiro</option>
+										<option>Divorciado</option>
+
+									</select>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<!-- CONTATO -->
+					<div class="content-card">
+
+						<h2 class="form-section-title">
+							Contato e endereco
+						</h2>
+
+						<div class="row">
+
+							<div class="col-md-3">
+
+								<div class="form-group">
+
+									<label for="telefone">
+										Telefone
+									</label>
+
+									<input type="text"
+										   class="form-control"
+										   id="telefone"
+										   value="(34) 3333-4444">
+
+								</div>
+
+							</div>
+
+							<div class="col-md-3">
+
+								<div class="form-group">
+
+									<label for="celular">
+										Celular
+									</label>
+
+									<input type="text"
+										   class="form-control"
+										   id="celular"
+										   value="(34) 99999-9999">
+
+								</div>
+
+							</div>
+
+							<div class="col-md-6">
+
+								<div class="form-group">
+
+									<label for="email">
+										Email
+									</label>
+
+									<input type="email"
+										   class="form-control"
+										   id="email"
+										   value="carlos@clinicavidaplena.com">
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="row">
+
+							<div class="col-md-2">
+
+								<div class="form-group">
+
+									<label for="cep">CEP</label>
+
+									<input type="text"
+										   class="form-control"
+										   id="cep"
+										   value="38400-000">
+
+								</div>
+
+							</div>
+
+							<div class="col-md-6">
+
+								<div class="form-group">
+
+									<label for="rua">Rua</label>
+
+									<input type="text"
+										   class="form-control"
+										   id="rua"
+										   value="Rua das Flores">
+
+								</div>
+
+							</div>
+
+							<div class="col-md-2">
+
+								<div class="form-group">
+
+									<label for="numero">Numero</label>
+
+									<input type="text"
+										   class="form-control"
+										   id="numero"
+										   value="150">
+
+								</div>
+
+							</div>
+
+							<div class="col-md-2">
+
+								<div class="form-group">
+
+									<label for="bairro">Bairro</label>
+
+									<input type="text"
+										   class="form-control"
+										   id="bairro"
+										   value="Centro">
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<!-- DADOS PROFISSIONAIS -->
+					<div class="content-card">
+
+						<h2 class="form-section-title">
+							Dados profissionais
+						</h2>
+
+						<div class="row">
+
+							<div class="col-md-3">
+
+								<div class="form-group">
+
+									<label for="cargo">
+										Cargo
+									</label>
+
+									<input type="text"
+										   class="form-control"
+										   id="cargo"
+										   value="Recepcionista">
+
+								</div>
+
+							</div>
+
+							<div class="col-md-3">
+
+								<div class="form-group">
+
+									<label for="setor">
+										Setor
+									</label>
+
+									<select class="form-control" id="setor">
+
+										<option>Selecione</option>
+										<option selected>Recepcao</option>
+										<option>Administrativo</option>
+										<option>Financeiro</option>
+										<option>Atendimento</option>
+
+									</select>
+
+								</div>
+
+							</div>
+
+							<div class="col-md-3">
+
+								<div class="form-group">
+
+									<label for="admissao">
+										Data admissao
+									</label>
+
+									<input type="date"
+										   class="form-control"
+										   id="admissao"
+										   value="2024-01-15">
+
+								</div>
+
+							</div>
+
+							<div class="col-md-3">
+
+								<div class="form-group">
+
+									<label for="status">
+										Status
+									</label>
+
+									<select class="form-control" id="status">
+
+										<option selected>Ativo</option>
+										<option>Inativo</option>
+
+									</select>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="row">
+
+							<div class="col-md-4">
+
+								<div class="form-group">
+
+									<label for="perfilAcesso">
+										Perfil de acesso
+									</label>
+
+									<select class="form-control" id="perfilAcesso">
+
+										<option>Selecione</option>
+										<option>Administrador</option>
+										<option selected>Recepcao</option>
+										<option>Medico</option>
+										<option>Atendimento</option>
+
+									</select>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<!-- OBSERVACOES -->
+					<div class="content-card">
+
+						<h2 class="form-section-title">
+							Observacoes finais
+						</h2>
+
+						<div class="form-group">
+
+							<label for="observacoes">
+								Observacoes
+							</label>
+
+							<textarea class="form-control"
+									  id="observacoes"
+									  rows="4">Funcionario atualizado recentemente para o setor de recepcao.</textarea>
+
+						</div>
+
+						<div class="form-actions clearfix">
+
+							<a href="lista.html"
+							   class="btn btn-default">
+
+								Cancelar
+
+							</a>
+
+							<button type="submit"
+									class="btn btn-primary pull-right">
+
+								Atualizar funcionario
+
+							</button>
+
+						</div>
+
+					</div>
+
+				</form>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- SCRIPTS -->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+	<script src="../../../assets/vendor/js/bootstrap.min.js"></script>
+
+	<script>
+
+		/*
+		=========================================
+		MASCARA CPF
+		=========================================
+		*/
+
+		$('#cpf').on('input', function () {
+
+			let valor = $(this).val();
+
+			valor = valor.replace(/\D/g, '');
+
+			valor = valor.replace(/(\d{3})(\d)/, '$1.$2');
+			valor = valor.replace(/(\d{3})(\d)/, '$1.$2');
+
+			valor = valor.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+
+			$(this).val(valor);
+
+		});
+
+
+		/*
+		=========================================
+		MASCARA TELEFONE
+		=========================================
+		*/
+
+		$('#telefone, #celular').on('input', function () {
+
+			let valor = $(this).val();
+
+			valor = valor.replace(/\D/g, '');
+
+			valor = valor.replace(/^(\d{2})(\d)/g, '($1) $2');
+
+			valor = valor.replace(/(\d)(\d{4})$/, '$1-$2');
+
+			$(this).val(valor);
+
+		});
+
+
+		/*
+		=========================================
+		MASCARA CEP
+		=========================================
+		*/
+
+		$('#cep').on('input', function () {
+
+			let valor = $(this).val();
+
+			valor = valor.replace(/\D/g, '');
+
+			valor = valor.replace(/(\d{5})(\d)/, '$1-$2');
+
+			$(this).val(valor);
+
+		});
+
+
+		/*
+		=========================================
+		SIMULACAO EDICAO
+		=========================================
+		*/
+
+		$('#form-editar-funcionario').on('submit', function (e) {
+
+			e.preventDefault();
+
+			alert('Dados do funcionario atualizados com sucesso!');
+
+		});
+
+	</script>
+
+</body>
+</html>
