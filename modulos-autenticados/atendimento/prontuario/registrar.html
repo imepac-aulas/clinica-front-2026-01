@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt-BR">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Registrar Atendimento | Atendimento | Clinica Vida Plena</title>
+	<link rel="stylesheet" href="../../../assets/vendor/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../../assets/css/modules.css">
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top app-navbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-menu" aria-expanded="false">
+					<span class="sr-only">Alternar navegacao</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../../index.html">Clinica Vida Plena</a>
+			</div>
+			<div class="collapse navbar-collapse" id="app-navbar-menu">
+				<ul class="nav navbar-nav">
+					<li><a href="../../index.html">Area Logada</a></li>
+					<li><a href="index.html">Atendimento / Prontuario</a></li>
+					<li class="active"><a href="registrar.html">Registrar Atendimento</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Usuario: Demo</a></li>
+					<li><a href="../../../index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid app-shell">
+		<div class="row">
+			<div class="col-md-3 col-lg-2">
+				<div class="app-sidebar">
+					<h2 class="app-sidebar-title">Prontuario</h2>
+					<ul class="nav nav-pills nav-stacked">
+						<li><a href="index.html">Visao geral</a></li>
+						<li><a href="lista.html">Listar prontuarios</a></li>
+						<li><a href="abrir.html">Abrir prontuario</a></li>
+						<li class="active"><a href="registrar.html">Registrar atendimento</a></li>
+						<li><a href="historico.html">Historico de atendimentos</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-md-9 col-lg-10">
+				<div class="breadcrumb-wrap">
+					<ol class="breadcrumb">
+						<li><a href="../../index.html">Area Logada</a></li>
+						<li><a href="index.html">Prontuario</a></li>
+						<li class="active">Registrar atendimento</li>
+					</ol>
+				</div>
+
+				<div class="page-hero">
+					<h1>Registrar Atendimento</h1>
+					<p>Formulario para registro completo do atendimento clinico: anamnese, evolucao clinica e conduta/orientacoes do medico responsavel.</p>
+				</div>
+
+				<form>
+					<div class="content-card">
+						<h2 class="form-section-title">Identificacao do Atendimento</h2>
+						<div class="row">
+							<div class="col-md-5">
+								<div class="form-group">
+									<label for="paciente">Paciente</label>
+									<input type="text" class="form-control" id="paciente" value="Ana Paula Ferreira" disabled="disabled">
+									<p class="help-block help-block-soft">Prontuario: 000001 — CPF: 012.345.678-90</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="medico-resp">Medico Responsavel</label>
+									<select class="form-control" id="medico-resp">
+										<option>Selecione</option>
+										<option selected="selected">Dr. Carlos Mendes — Clinica Geral</option>
+										<option>Dra. Fernanda Alves — Cardiologia</option>
+										<option>Dr. Ricardo Barbosa — Ortopedia</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+									<label for="data-atend">Data do Atendimento</label>
+									<input type="text" class="form-control" id="data-atend" value="19/05/2026">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="especialidade">Especialidade</label>
+									<select class="form-control" id="especialidade">
+										<option>Selecione</option>
+										<option selected="selected">Clinica Geral</option>
+										<option>Cardiologia</option>
+										<option>Ortopedia</option>
+										<option>Neurologia</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="convenio">Convenio / Particular</label>
+									<select class="form-control" id="convenio">
+										<option>Particular</option>
+										<option selected="selected">Unimed Nacional</option>
+										<option>Bradesco Saude</option>
+										<option>SulAmerica</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="tipo-consulta">Tipo de Consulta</label>
+									<select class="form-control" id="tipo-consulta">
+										<option selected="selected">Consulta de Retorno</option>
+										<option>Primeira Consulta</option>
+										<option>Urgencia</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="content-card">
+						<h2 class="form-section-title">Anamnese</h2>
+						<p class="help-block help-block-soft">Registre a queixa principal, historia da doenca atual e antecedentes relevantes do paciente.</p>
+						<div class="form-group">
+							<label for="queixa-principal">Queixa Principal</label>
+							<input type="text" class="form-control" id="queixa-principal" placeholder="Ex.: Dor de cabeca intensa ha 3 dias">
+						</div>
+						<div class="form-group">
+							<label for="historia-doenca">Historia da Doenca Atual (HDA)</label>
+							<textarea class="form-control" id="historia-doenca" rows="4" placeholder="Descreva o inicio, duracao, caracteristicas, fatores de melhora e piora e sintomas associados."></textarea>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="antecedentes-pessoais">Antecedentes Pessoais</label>
+									<textarea class="form-control" id="antecedentes-pessoais" rows="3" placeholder="Doencas previas, cirurgias, internacoes, alergias...">Hipertensao arterial em acompanhamento. Alergia a Dipirona.</textarea>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="antecedentes-familiares">Antecedentes Familiares</label>
+									<textarea class="form-control" id="antecedentes-familiares" rows="3" placeholder="Doencas relevantes em familiares de primeiro grau...">Mae com hipertensao e diabetes tipo 2.</textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="content-card">
+						<h2 class="form-section-title">Evolucao Clinica</h2>
+						<p class="help-block help-block-soft">Registre os achados do exame fisico, avaliacao clinica e progresso do quadro do paciente.</p>
+						<div class="row">
+							<div class="col-md-3">
+								<div class="form-group">
+									<label for="pa">Pressao Arterial (mmHg)</label>
+									<input type="text" class="form-control" id="pa" placeholder="Ex.: 120/80">
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+									<label for="fc">Freq. Cardiaca (bpm)</label>
+									<input type="text" class="form-control" id="fc" placeholder="Ex.: 78">
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+									<label for="temp">Temperatura (C)</label>
+									<input type="text" class="form-control" id="temp" placeholder="Ex.: 36.5">
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+									<label for="peso">Peso (kg)</label>
+									<input type="text" class="form-control" id="peso" placeholder="Ex.: 68">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="achados-exame">Achados do Exame Fisico</label>
+							<textarea class="form-control" id="achados-exame" rows="4" placeholder="Descreva os achados relevantes ao exame fisico geral e especifico."></textarea>
+						</div>
+						<div class="form-group">
+							<label for="avaliacao-clinica">Avaliacao e Diagnostico</label>
+							<textarea class="form-control" id="avaliacao-clinica" rows="3" placeholder="Hipotese diagnostica ou diagnostico definido. CID-10 se aplicavel."></textarea>
+						</div>
+					</div>
+
+					<div class="content-card">
+						<h2 class="form-section-title">Conduta e Orientacoes</h2>
+						<p class="help-block help-block-soft">Registre as decisoes terapeuticas, exames solicitados e orientacoes de retorno ao paciente.</p>
+						<div class="form-group">
+							<label for="prescricao">Prescricao Medica</label>
+							<textarea class="form-control" id="prescricao" rows="4" placeholder="Medicamentos, doses, vias de administracao e duracao do tratamento."></textarea>
+						</div>
+						<div class="form-group">
+							<label for="exames-solicitados">Exames Solicitados</label>
+							<textarea class="form-control" id="exames-solicitados" rows="3" placeholder="Lista de exames laboratoriais, de imagem ou outros procedimentos solicitados."></textarea>
+						</div>
+						<div class="form-group">
+							<label for="orientacoes-retorno">Orientacoes e Retorno</label>
+							<textarea class="form-control" id="orientacoes-retorno" rows="3" placeholder="Orientacoes gerais ao paciente, prazo de retorno e sinais de alarme para buscar atendimento antes."></textarea>
+						</div>
+						<div class="form-actions clearfix">
+							<a href="abrir.html" class="btn btn-default">Cancelar</a>
+							<button type="button" class="btn btn-primary pull-right">Salvar registro</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../../assets/vendor/js/bootstrap.min.js"></script>
+</body>
+</html>
