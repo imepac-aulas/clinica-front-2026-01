@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt-BR">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Listar Prontuarios | Atendimento | Clinica Vida Plena</title>
+	<link rel="stylesheet" href="../../../assets/vendor/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../../assets/css/modules.css">
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top app-navbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-menu" aria-expanded="false">
+					<span class="sr-only">Alternar navegacao</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../../index.html">Clinica Vida Plena</a>
+			</div>
+			<div class="collapse navbar-collapse" id="app-navbar-menu">
+				<ul class="nav navbar-nav">
+					<li><a href="../../index.html">Area Logada</a></li>
+					<li><a href="index.html">Atendimento / Prontuario</a></li>
+					<li class="active"><a href="lista.html">Listagem</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Usuario: Demo</a></li>
+					<li><a href="../../../index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid app-shell">
+		<div class="row">
+			<div class="col-md-3 col-lg-2">
+				<div class="app-sidebar">
+					<h2 class="app-sidebar-title">Prontuario</h2>
+					<ul class="nav nav-pills nav-stacked">
+						<li><a href="index.html">Visao geral</a></li>
+						<li class="active"><a href="lista.html">Listar prontuarios</a></li>
+						<li><a href="abrir.html">Abrir prontuario</a></li>
+						<li><a href="registrar.html">Registrar atendimento</a></li>
+						<li><a href="historico.html">Historico de atendimentos</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-md-9 col-lg-10">
+				<div class="breadcrumb-wrap">
+					<ol class="breadcrumb">
+						<li><a href="../../index.html">Area Logada</a></li>
+						<li><a href="index.html">Prontuario</a></li>
+						<li class="active">Listar prontuarios</li>
+					</ol>
+				</div>
+
+				<div class="page-hero">
+					<h1>Prontuarios Cadastrados</h1>
+					<p>Consulte e localize o prontuario de um paciente por nome, CPF ou numero de prontuario para acessar seu historico clinico.</p>
+				</div>
+
+				<div class="content-card filter-bar">
+					<h2 class="content-card-title">Filtros</h2>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+								<label for="filtro-paciente">Paciente</label>
+								<input type="text" class="form-control" id="filtro-paciente" placeholder="Buscar por nome ou CPF">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="filtro-prontuario">Num. Prontuario</label>
+								<input type="text" class="form-control" id="filtro-prontuario" placeholder="Ex.: 000142">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="filtro-ultimo-atend">Ultimo Atendimento</label>
+								<select class="form-control" id="filtro-ultimo-atend">
+									<option>Qualquer periodo</option>
+									<option>Hoje</option>
+									<option>Ultimos 7 dias</option>
+									<option>Ultimos 30 dias</option>
+									<option>Mais de 30 dias</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+								<label>&nbsp;</label>
+								<div>
+									<button type="button" class="btn btn-primary btn-block">Filtrar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="content-card">
+					<div class="clearfix">
+						<h2 class="content-card-title pull-left">Pacientes com Prontuario</h2>
+						<a href="registrar.html" class="btn btn-success pull-right"><span class="glyphicon glyphicon-plus"></span> Novo registro</a>
+					</div>
+					<div class="table-responsive">
+						<table class="table table-hover table-striped">
+							<thead>
+								<tr>
+									<th>Num. Prontuario</th>
+									<th>Paciente</th>
+									<th>CPF</th>
+									<th>Ultimo Atendimento</th>
+									<th>Medico Responsavel</th>
+									<th class="text-right">Acoes</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>000001</td>
+									<td>Ana Paula Ferreira</td>
+									<td>012.345.678-90</td>
+									<td>19/05/2026</td>
+									<td>Dr. Carlos Mendes</td>
+									<td class="text-right table-actions">
+										<a href="abrir.html" class="btn btn-default btn-sm">Abrir</a>
+										<a href="historico.html" class="btn btn-primary btn-sm">Historico</a>
+									</td>
+								</tr>
+								<tr>
+									<td>000002</td>
+									<td>Roberto Souza Lima</td>
+									<td>098.765.432-10</td>
+									<td>16/05/2026</td>
+									<td>Dra. Fernanda Alves</td>
+									<td class="text-right table-actions">
+										<a href="abrir.html" class="btn btn-default btn-sm">Abrir</a>
+										<a href="historico.html" class="btn btn-primary btn-sm">Historico</a>
+									</td>
+								</tr>
+								<tr>
+									<td>000003</td>
+									<td>Marcia Oliveira Santos</td>
+									<td>055.123.987-44</td>
+									<td>14/05/2026</td>
+									<td>Dr. Carlos Mendes</td>
+									<td class="text-right table-actions">
+										<a href="abrir.html" class="btn btn-default btn-sm">Abrir</a>
+										<a href="historico.html" class="btn btn-primary btn-sm">Historico</a>
+									</td>
+								</tr>
+								<tr>
+									<td>000004</td>
+									<td>Paulo Henrique Costa</td>
+									<td>033.456.789-11</td>
+									<td>12/05/2026</td>
+									<td>Dr. Ricardo Barbosa</td>
+									<td class="text-right table-actions">
+										<a href="abrir.html" class="btn btn-default btn-sm">Abrir</a>
+										<a href="historico.html" class="btn btn-primary btn-sm">Historico</a>
+									</td>
+								</tr>
+								<tr>
+									<td>000005</td>
+									<td>Julia Nascimento Rocha</td>
+									<td>077.890.234-55</td>
+									<td>08/05/2026</td>
+									<td>Dra. Fernanda Alves</td>
+									<td class="text-right table-actions">
+										<a href="abrir.html" class="btn btn-default btn-sm">Abrir</a>
+										<a href="historico.html" class="btn btn-primary btn-sm">Historico</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../../assets/vendor/js/bootstrap.min.js"></script>
+</body>
+</html>
