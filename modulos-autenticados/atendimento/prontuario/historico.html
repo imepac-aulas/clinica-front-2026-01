@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt-BR">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Historico de Atendimentos | Atendimento | Clinica Vida Plena</title>
+	<link rel="stylesheet" href="../../../assets/vendor/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../../assets/css/modules.css">
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top app-navbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-menu" aria-expanded="false">
+					<span class="sr-only">Alternar navegacao</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../../index.html">Clinica Vida Plena</a>
+			</div>
+			<div class="collapse navbar-collapse" id="app-navbar-menu">
+				<ul class="nav navbar-nav">
+					<li><a href="../../index.html">Area Logada</a></li>
+					<li><a href="index.html">Atendimento / Prontuario</a></li>
+					<li class="active"><a href="historico.html">Historico</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Usuario: Demo</a></li>
+					<li><a href="../../../index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid app-shell">
+		<div class="row">
+			<div class="col-md-3 col-lg-2">
+				<div class="app-sidebar">
+					<h2 class="app-sidebar-title">Prontuario</h2>
+					<ul class="nav nav-pills nav-stacked">
+						<li><a href="index.html">Visao geral</a></li>
+						<li><a href="lista.html">Listar prontuarios</a></li>
+						<li><a href="abrir.html">Abrir prontuario</a></li>
+						<li><a href="registrar.html">Registrar atendimento</a></li>
+						<li class="active"><a href="historico.html">Historico de atendimentos</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-md-9 col-lg-10">
+				<div class="breadcrumb-wrap">
+					<ol class="breadcrumb">
+						<li><a href="../../index.html">Area Logada</a></li>
+						<li><a href="index.html">Prontuario</a></li>
+						<li class="active">Historico de atendimentos</li>
+					</ol>
+				</div>
+
+				<div class="page-hero">
+					<h1>Historico de Atendimentos</h1>
+					<p>Linha do tempo com todos os atendimentos e evolucoes clinicas registradas, organizadas por data e profissional responsavel.</p>
+				</div>
+
+				<div class="profile-summary">
+					<div class="row">
+						<div class="col-md-3">
+							<strong>Paciente:</strong> Ana Paula Ferreira
+						</div>
+						<div class="col-md-2">
+							<strong>Prontuario:</strong> 000001
+						</div>
+						<div class="col-md-3">
+							<strong>CPF:</strong> 012.345.678-90
+						</div>
+						<div class="col-md-2">
+							<strong>Nascimento:</strong> 14/03/1985
+						</div>
+						<div class="col-md-2">
+							<strong>Idade:</strong> 41 anos
+						</div>
+					</div>
+				</div>
+
+				<div class="content-card filter-bar">
+					<h2 class="content-card-title">Filtros</h2>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+								<label for="filtro-medico">Medico</label>
+								<select class="form-control" id="filtro-medico">
+									<option>Todos</option>
+									<option>Dr. Carlos Mendes</option>
+									<option>Dra. Fernanda Alves</option>
+									<option>Dr. Ricardo Barbosa</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label for="filtro-periodo">Periodo</label>
+								<select class="form-control" id="filtro-periodo">
+									<option>Todo o historico</option>
+									<option>Ultimos 3 meses</option>
+									<option>Ultimos 6 meses</option>
+									<option>Ultimo ano</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+								<label>&nbsp;</label>
+								<div>
+									<button type="button" class="btn btn-primary btn-block">Filtrar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="content-card">
+					<div class="clearfix">
+						<h2 class="content-card-title pull-left">Linha do Tempo</h2>
+						<a href="registrar.html" class="btn btn-success pull-right"><span class="glyphicon glyphicon-plus"></span> Novo registro</a>
+					</div>
+
+					<div class="content-card" style="background:#f0f8ec; border-color:#b8ddb0; margin-bottom:15px;">
+						<div class="clearfix">
+							<span class="label-status active" style="float:left; margin-right:10px;">19/05/2026</span>
+							<strong>Dr. Carlos Mendes</strong> — Clinica Geral
+							<span class="pull-right"><span class="module-badge">Consulta de Retorno</span></span>
+						</div>
+						<hr style="margin:12px 0; border-color:#d0e8c8;">
+						<div class="row">
+							<div class="col-md-4">
+								<p><strong>Anamnese:</strong> Cefaleia intensa ha 3 dias sem melhora com analgesicos. Historico de enxaqueca.</p>
+							</div>
+							<div class="col-md-4">
+								<p><strong>Evolucao:</strong> PA 140/90 mmHg. FC 88 bpm. Fotofobia leve e nausea ocasional. Sem sinais neurologicos focais.</p>
+							</div>
+							<div class="col-md-4">
+								<p><strong>Conduta:</strong> Sumatriptano 50mg. Ajuste de anti-hipertensivo. Solicitado fundo de olho. Retorno em 30 dias.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="content-card" style="background:#f8fbfd; border-color:#dce7ee; margin-bottom:15px;">
+						<div class="clearfix">
+							<span class="label-status active" style="float:left; margin-right:10px;">02/04/2026</span>
+							<strong>Dr. Carlos Mendes</strong> — Clinica Geral
+							<span class="pull-right"><span class="module-badge">Primeira Consulta</span></span>
+						</div>
+						<hr style="margin:12px 0; border-color:#dce7ee;">
+						<div class="row">
+							<div class="col-md-4">
+								<p><strong>Anamnese:</strong> Paciente relata tonturas frequentes ao se levantar. Pressao elevada ha aproximadamente 2 anos sem tratamento.</p>
+							</div>
+							<div class="col-md-4">
+								<p><strong>Evolucao:</strong> PA 158/98 mmHg. FC 82 bpm. Ausculta cardiaca normal. Sem edema de membros inferiores.</p>
+							</div>
+							<div class="col-md-4">
+								<p><strong>Conduta:</strong> Iniciado losartana 50mg 1x ao dia. Orientado dieta hipossodica e atividade fisica regular. Retorno em 45 dias.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="content-card" style="background:#f8fbfd; border-color:#dce7ee; margin-bottom:0;">
+						<div class="clearfix">
+							<span class="label-status limited" style="float:left; margin-right:10px;">18/11/2025</span>
+							<strong>Dra. Fernanda Alves</strong> — Cardiologia
+							<span class="pull-right"><span class="module-badge">Consulta de Retorno</span></span>
+						</div>
+						<hr style="margin:12px 0; border-color:#dce7ee;">
+						<div class="row">
+							<div class="col-md-4">
+								<p><strong>Anamnese:</strong> Palpitacoes esporadicas ha 2 semanas. Sem dor precordial ou dispneia associada.</p>
+							</div>
+							<div class="col-md-4">
+								<p><strong>Evolucao:</strong> Eletrocardiograma dentro dos limites normais. Holter 24h solicitado na consulta anterior com resultado normal.</p>
+							</div>
+							<div class="col-md-4">
+								<p><strong>Conduta:</strong> Alta da cardiologia. Orientada a retornar se sintomas recorrentes. Encaminhada para acompanhamento com clinico geral.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="content-card">
+					<div class="form-actions clearfix" style="border-top:none; margin-top:0; padding-top:0;">
+						<a href="abrir.html" class="btn btn-default">Voltar ao prontuario</a>
+						<a href="registrar.html" class="btn btn-primary pull-right">Novo registro de atendimento</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../../assets/vendor/js/bootstrap.min.js"></script>
+</body>
+</html>
