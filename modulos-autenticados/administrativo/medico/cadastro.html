@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt-BR">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cadastrar Medico | Administrativo | Clinica Vida Plena</title>
+	<link rel="stylesheet" href="../../../assets/vendor/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../../assets/css/modules.css">
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top app-navbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-menu" aria-expanded="false">
+					<span class="sr-only">Alternar navegacao</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../../index.html">Clinica Vida Plena</a>
+			</div>
+			<div class="collapse navbar-collapse" id="app-navbar-menu">
+				<ul class="nav navbar-nav">
+					<li><a href="../../index.html">Area Logada</a></li>
+					<li><a href="index.html">Administrativo / Medicos</a></li>
+					<li class="active"><a href="cadastro.html">Cadastrar</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Usuario: Demo</a></li>
+					<li><a href="../../../index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid app-shell">
+		<div class="row">
+			<div class="col-md-3 col-lg-2">
+				<div class="app-sidebar">
+					<h2 class="app-sidebar-title">Medicos</h2>
+					<ul class="nav nav-pills nav-stacked">
+						<li><a href="index.html"><span class="glyphicon glyphicon-th-large"></span> Visao geral</a></li>
+						<li class="active"><a href="cadastro.html"><span class="glyphicon glyphicon-plus"></span> Cadastrar medico</a></li>
+						<li><a href="lista.html"><span class="glyphicon glyphicon-th-list"></span> Listar medicos</a></li>
+						<li><a href="editar.html"><span class="glyphicon glyphicon-pencil"></span> Editar medico</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-md-9 col-lg-10">
+				<div class="breadcrumb-wrap">
+					<ol class="breadcrumb">
+						<li><a href="../../index.html">Area Logada</a></li>
+						<li><a href="index.html">Medicos</a></li>
+						<li class="active">Cadastrar medico</li>
+					</ol>
+				</div>
+
+				<div class="page-hero">
+					<h1>Novo Medico</h1>
+					<p>Preencha os dados do medico, informe o CRM com o estado de registro e selecione ao menos uma especialidade antes de salvar.</p>
+				</div>
+
+				<form>
+					<div class="content-card">
+						<h2 class="form-section-title">Dados pessoais</h2>
+						<div class="row">
+							<div class="col-md-8">
+								<div class="form-group">
+									<label for="nome-medico">Nome completo</label>
+									<input type="text" class="form-control" id="nome-medico" placeholder="Ex.: Dr. Carlos Alberto Souza">
+									<p class="help-block help-block-soft">Informe o nome completo conforme consta no registro do CRM.</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="status-medico">Status</label>
+									<select class="form-control" id="status-medico">
+										<option>Ativo</option>
+										<option>Inativo</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="telefone-medico">Telefone</label>
+									<input type="text" class="form-control" id="telefone-medico" placeholder="Ex.: (11) 99999-0000">
+								</div>
+							</div>
+							<div class="col-md-8">
+								<div class="form-group">
+									<label for="email-medico">E-mail</label>
+									<input type="text" class="form-control" id="email-medico" placeholder="Ex.: dr.carlos@clinicavidaplena.com.br">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="content-card">
+						<h2 class="form-section-title">Registro no CRM</h2>
+						<p class="help-block help-block-soft">O CRM e o estado de registro sao obrigatorios e devem ser unicos no sistema.</p>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="crm-medico">Numero do CRM</label>
+									<input type="text" class="form-control" id="crm-medico" placeholder="Ex.: 123456">
+									<p class="help-block help-block-soft">Apenas os digitos numericos do CRM.</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="uf-crm">Estado do CRM (UF)</label>
+									<select class="form-control" id="uf-crm">
+										<option value="">Selecione</option>
+										<option>AC</option>
+										<option>AL</option>
+										<option>AP</option>
+										<option>AM</option>
+										<option>BA</option>
+										<option>CE</option>
+										<option>DF</option>
+										<option>ES</option>
+										<option>GO</option>
+										<option>MA</option>
+										<option>MT</option>
+										<option>MS</option>
+										<option>MG</option>
+										<option>PA</option>
+										<option>PB</option>
+										<option>PR</option>
+										<option>PE</option>
+										<option>PI</option>
+										<option>RJ</option>
+										<option>RN</option>
+										<option>RS</option>
+										<option>RO</option>
+										<option>RR</option>
+										<option>SC</option>
+										<option selected="selected">SP</option>
+										<option>SE</option>
+										<option>TO</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="content-card">
+						<h2 class="form-section-title">Especialidades</h2>
+						<p class="help-block help-block-soft">Selecione ao menos uma especialidade. O medico so podera ser associado a consultas nas especialidades aqui definidas.</p>
+
+						<div class="permission-panel">
+							<div class="permission-panel-heading clearfix">
+								<h4 class="pull-left">Especialidades disponíveis</h4>
+								<label class="checkbox-inline pull-right"><input type="checkbox" class="js-select-all"> Selecionar todas</label>
+							</div>
+							<div class="permission-panel-body">
+								<div class="permission-list row">
+									<div class="col-md-6">
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Cardiologia</label></div>
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Clinica Geral</label></div>
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Dermatologia</label></div>
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Endocrinologia</label></div>
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Ginecologia e Obstetricia</label></div>
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Neurologia</label></div>
+									</div>
+									<div class="col-md-6">
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Oftalmologia</label></div>
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Ortopedia e Traumatologia</label></div>
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Pediatria</label></div>
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Psiquiatria</label></div>
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Reumatologia</label></div>
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Urologia</label></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="page-note">
+							As especialidades listadas sao as previamente cadastradas no modulo de Especialidades. Para adicionar novas opcoes, acesse o modulo correspondente no menu Administrativo.
+						</div>
+					</div>
+
+					<div class="content-card">
+						<h2 class="form-section-title">Observacoes</h2>
+						<div class="form-group">
+							<label for="obs-medico">Observacoes</label>
+							<textarea class="form-control" id="obs-medico" rows="4" placeholder="Informacoes adicionais sobre o medico, restricoes de horario ou qualquer observacao relevante."></textarea>
+						</div>
+						<div class="form-actions clearfix">
+							<a href="index.html" class="btn btn-default">Cancelar</a>
+							<button type="button" class="btn btn-primary pull-right">Salvar medico</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../../assets/vendor/js/bootstrap.min.js"></script>
+	<script src="../../../assets/js/modules.js"></script>
+</body>
+</html>

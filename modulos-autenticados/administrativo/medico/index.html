@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt-BR">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Medicos | Administrativo | Clinica Vida Plena</title>
+	<link rel="stylesheet" href="../../../assets/vendor/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../../assets/css/modules.css">
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top app-navbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-menu" aria-expanded="false">
+					<span class="sr-only">Alternar navegacao</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../../index.html">Clinica Vida Plena</a>
+			</div>
+			<div class="collapse navbar-collapse" id="app-navbar-menu">
+				<ul class="nav navbar-nav">
+					<li><a href="../../index.html">Area Logada</a></li>
+					<li class="active"><a href="index.html">Administrativo / Medicos</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Usuario: Demo</a></li>
+					<li><a href="../../../index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid app-shell">
+		<div class="row">
+			<div class="col-md-3 col-lg-2">
+				<div class="app-sidebar">
+					<h2 class="app-sidebar-title">Medicos</h2>
+					<ul class="nav nav-pills nav-stacked">
+						<li class="active"><a href="index.html"><span class="glyphicon glyphicon-th-large"></span> Visao geral</a></li>
+						<li><a href="cadastro.html"><span class="glyphicon glyphicon-plus"></span> Cadastrar medico</a></li>
+						<li><a href="lista.html"><span class="glyphicon glyphicon-th-list"></span> Listar medicos</a></li>
+						<li><a href="editar.html"><span class="glyphicon glyphicon-pencil"></span> Editar medico</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-md-9 col-lg-10">
+				<div class="breadcrumb-wrap">
+					<ol class="breadcrumb">
+						<li><a href="../../index.html">Area Logada</a></li>
+						<li><a href="../../index.html">Administrativo</a></li>
+						<li class="active">Medicos</li>
+					</ol>
+				</div>
+
+				<div class="page-hero">
+					<h1>Gestao de Medicos</h1>
+					<p>Cadastro e manutencao dos medicos da clinica. Cada medico deve ter ao menos uma especialidade vinculada para que possa ser associado a consultas e agendamentos.</p>
+				</div>
+
+				<div class="row stat-grid">
+					<div class="col-sm-4">
+						<div class="stat-card">
+							<strong>12</strong>
+							<span>Medicos Cadastrados</span>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="stat-card">
+							<strong>10</strong>
+							<span>Medicos Ativos</span>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="stat-card">
+							<strong>08</strong>
+							<span>Especialidades Atendidas</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 col-lg-3">
+						<a class="action-card" href="cadastro.html">
+							<span class="glyphicon glyphicon-plus-sign"></span>
+							<h3>Cadastrar Medico</h3>
+							<p>Formulario completo para registrar um novo medico com dados pessoais, CRM e especialidades.</p>
+							<span class="text-link">Abrir formulario</span>
+						</a>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<a class="action-card" href="lista.html">
+							<span class="glyphicon glyphicon-th-list"></span>
+							<h3>Listar Medicos</h3>
+							<p>Consulte os medicos cadastrados com filtros por nome, CRM, especialidade e status.</p>
+							<span class="text-link">Ver listagem</span>
+						</a>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<a class="action-card" href="editar.html">
+							<span class="glyphicon glyphicon-pencil"></span>
+							<h3>Editar Medico</h3>
+							<p>Atualize dados cadastrais, especialidades e status de um medico ja registrado.</p>
+							<span class="text-link">Abrir edicao</span>
+						</a>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<a class="action-card" href="lista.html">
+							<span class="glyphicon glyphicon-ban-circle"></span>
+							<h3>Inativar / Ativar</h3>
+							<p>Gerencie o status dos medicos diretamente pela listagem ou pelo formulario de edicao.</p>
+							<span class="text-link">Gerenciar status</span>
+						</a>
+					</div>
+				</div>
+
+				<div class="content-card">
+					<h2 class="content-card-title">Informacoes importantes</h2>
+					<div class="row">
+						<div class="col-md-4">
+							<p><span class="module-badge">CRM</span> O numero do CRM e o estado de registro sao obrigatorios e devem ser unicos no sistema.</p>
+						</div>
+						<div class="col-md-4">
+							<p><span class="module-badge">Especialidades</span> Selecione ao menos uma especialidade por medico para habilitar o agendamento de consultas.</p>
+						</div>
+						<div class="col-md-4">
+							<p><span class="module-badge">Status</span> Medicos inativos nao aparecem nas opcoes de agendamento, mas seu historico e preservado.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../../assets/vendor/js/bootstrap.min.js"></script>
+</body>
+</html>

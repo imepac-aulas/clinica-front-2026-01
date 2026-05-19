@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt-BR">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Listar Medicos | Administrativo | Clinica Vida Plena</title>
+	<link rel="stylesheet" href="../../../assets/vendor/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../../assets/css/modules.css">
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top app-navbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-menu" aria-expanded="false">
+					<span class="sr-only">Alternar navegacao</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../../index.html">Clinica Vida Plena</a>
+			</div>
+			<div class="collapse navbar-collapse" id="app-navbar-menu">
+				<ul class="nav navbar-nav">
+					<li><a href="../../index.html">Area Logada</a></li>
+					<li><a href="index.html">Administrativo / Medicos</a></li>
+					<li class="active"><a href="lista.html">Listagem</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Usuario: Demo</a></li>
+					<li><a href="../../../index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid app-shell">
+		<div class="row">
+			<div class="col-md-3 col-lg-2">
+				<div class="app-sidebar">
+					<h2 class="app-sidebar-title">Medicos</h2>
+					<ul class="nav nav-pills nav-stacked">
+						<li><a href="index.html"><span class="glyphicon glyphicon-th-large"></span> Visao geral</a></li>
+						<li><a href="cadastro.html"><span class="glyphicon glyphicon-plus"></span> Cadastrar medico</a></li>
+						<li class="active"><a href="lista.html"><span class="glyphicon glyphicon-th-list"></span> Listar medicos</a></li>
+						<li><a href="editar.html"><span class="glyphicon glyphicon-pencil"></span> Editar medico</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-md-9 col-lg-10">
+				<div class="breadcrumb-wrap">
+					<ol class="breadcrumb">
+						<li><a href="../../index.html">Area Logada</a></li>
+						<li><a href="index.html">Medicos</a></li>
+						<li class="active">Listar medicos</li>
+					</ol>
+				</div>
+
+				<div class="page-hero">
+					<h1>Medicos Cadastrados</h1>
+					<p>Consulte, filtre e gerencie os medicos da clinica. Use os filtros abaixo para localizar rapidamente por nome, CRM, especialidade ou status.</p>
+				</div>
+
+				<div class="content-card filter-bar">
+					<h2 class="content-card-title">Filtros</h2>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+								<label for="filtro-nome">Nome ou CRM</label>
+								<input type="text" class="form-control" id="filtro-nome" placeholder="Pesquisar por nome ou CRM">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="filtro-especialidade">Especialidade</label>
+								<select class="form-control" id="filtro-especialidade">
+									<option>Todas</option>
+									<option>Cardiologia</option>
+									<option>Clinica Geral</option>
+									<option>Dermatologia</option>
+									<option>Endocrinologia</option>
+									<option>Ginecologia e Obstetricia</option>
+									<option>Neurologia</option>
+									<option>Oftalmologia</option>
+									<option>Ortopedia e Traumatologia</option>
+									<option>Pediatria</option>
+									<option>Psiquiatria</option>
+									<option>Reumatologia</option>
+									<option>Urologia</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="filtro-status">Status</label>
+								<select class="form-control" id="filtro-status">
+									<option>Todos</option>
+									<option>Ativo</option>
+									<option>Inativo</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+								<label>&nbsp;</label>
+								<div>
+									<button type="button" class="btn btn-primary btn-block">Filtrar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="content-card">
+					<div class="clearfix">
+						<h2 class="content-card-title pull-left">Tabela de medicos</h2>
+						<a href="cadastro.html" class="btn btn-success pull-right"><span class="glyphicon glyphicon-plus"></span> Novo medico</a>
+					</div>
+					<div class="table-responsive">
+						<table class="table table-hover table-striped">
+							<thead>
+								<tr>
+									<th>Nome</th>
+									<th>CRM</th>
+									<th>Especialidade(s)</th>
+									<th>Telefone</th>
+									<th>Status</th>
+									<th class="text-right">Acoes</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Dr. Carlos Alberto Souza</td>
+									<td>CRM/SP 123456</td>
+									<td>Cardiologia</td>
+									<td>(11) 99123-4567</td>
+									<td><span class="label-status active">Ativo</span></td>
+									<td class="text-right table-actions">
+										<a href="editar.html" class="btn btn-default btn-sm">Editar</a>
+										<button type="button" class="btn btn-warning btn-sm js-toggle-status">Inativar</button>
+									</td>
+								</tr>
+								<tr>
+									<td>Dra. Mariana Costa Lima</td>
+									<td>CRM/SP 234567</td>
+									<td>Pediatria, Clinica Geral</td>
+									<td>(11) 98234-5678</td>
+									<td><span class="label-status active">Ativo</span></td>
+									<td class="text-right table-actions">
+										<a href="editar.html" class="btn btn-default btn-sm">Editar</a>
+										<button type="button" class="btn btn-warning btn-sm js-toggle-status">Inativar</button>
+									</td>
+								</tr>
+								<tr>
+									<td>Dr. Roberto Alves Mendes</td>
+									<td>CRM/RJ 345678</td>
+									<td>Ortopedia e Traumatologia</td>
+									<td>(21) 97345-6789</td>
+									<td><span class="label-status active">Ativo</span></td>
+									<td class="text-right table-actions">
+										<a href="editar.html" class="btn btn-default btn-sm">Editar</a>
+										<button type="button" class="btn btn-warning btn-sm js-toggle-status">Inativar</button>
+									</td>
+								</tr>
+								<tr>
+									<td>Dra. Fernanda Oliveira</td>
+									<td>CRM/SP 456789</td>
+									<td>Dermatologia, Clinica Geral</td>
+									<td>(11) 96456-7890</td>
+									<td><span class="label-status limited">Inativo</span></td>
+									<td class="text-right table-actions">
+										<a href="editar.html" class="btn btn-default btn-sm">Editar</a>
+										<button type="button" class="btn btn-success btn-sm js-toggle-status">Ativar</button>
+									</td>
+								</tr>
+								<tr>
+									<td>Dr. Paulo Henrique Dias</td>
+									<td>CRM/MG 567890</td>
+									<td>Neurologia, Psiquiatria</td>
+									<td>(31) 95567-8901</td>
+									<td><span class="label-status active">Ativo</span></td>
+									<td class="text-right table-actions">
+										<a href="editar.html" class="btn btn-default btn-sm">Editar</a>
+										<button type="button" class="btn btn-warning btn-sm js-toggle-status">Inativar</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../../assets/vendor/js/bootstrap.min.js"></script>
+	<script>
+		$(function () {
+			$(document).on('click', '.js-toggle-status', function () {
+				var $btn    = $(this);
+				var $row    = $btn.closest('tr');
+				var $badge  = $row.find('.label-status');
+				var ativo   = $badge.hasClass('active');
+
+				if (ativo) {
+					$badge.removeClass('active').addClass('limited').text('Inativo');
+					$btn.removeClass('btn-warning').addClass('btn-success').text('Ativar');
+				} else {
+					$badge.removeClass('limited').addClass('active').text('Ativo');
+					$btn.removeClass('btn-success').addClass('btn-warning').text('Inativar');
+				}
+			});
+		});
+	</script>
+</body>
+</html>
