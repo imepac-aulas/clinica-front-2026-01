@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt-BR">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Listar Perfis | Administrativo | Clinica Vida Plena</title>
+	<link rel="stylesheet" href="../../../assets/vendor/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../../assets/css/modules.css">
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top app-navbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-menu" aria-expanded="false">
+					<span class="sr-only">Alternar navegacao</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../../index.html">Clinica Vida Plena</a>
+			</div>
+			<div class="collapse navbar-collapse" id="app-navbar-menu">
+				<ul class="nav navbar-nav">
+					<li><a href="../../index.html">Area Logada</a></li>
+					<li><a href="index.html">Administrativo / Especialidade</a></li>
+					<li class="active"><a href="lista.html">Listagem</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Usuario: Demo</a></li>
+					<li><a href="../../../index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid app-shell">
+		<div class="row">
+			<div class="col-md-3 col-lg-2">
+				<div class="app-sidebar">
+					<h2 class="app-sidebar-title">Especialidade</h2>
+					<ul class="nav nav-pills nav-stacked">
+						<li><a href="index.html">Visao geral</a></li>
+						<li><a href="cadastro.html">Cadastrar especialidade</a></li>
+						<li><a href="listar.html">Listar especialidade</a></li>
+						<li><a href="editar.html">Editar especialidade</a></li>
+						<li><a href="ativacao.html">Inativar/Ativar</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-md-9 col-lg-10">
+				<div class="breadcrumb-wrap">
+					<ol class="breadcrumb">
+						<li><a href="../../index.html">Area Logada</a></li>
+						<li><a href="index.html">Especialidade</a></li>
+						<li class="active">Lista de especialidade</li>
+					</ol>
+				</div>
+
+				<div class="page-hero">
+					<h1>Lista de Especialidades</h1>
+					<p>Consulta de especialidade já cadastradas no sistema.</p>
+				</div>
+                
+				<div class="content-card filter-bar">
+					<h2 class="content-card-title">Filtros</h2>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+								<label for="filtro-nome">Nome da Especialidade</label>
+								<input type="text" class="form-control" id="filtro-nome" placeholder="Pesquisar por nome">
+							</div>
+						</div>
+
+                    <div class="col-md-3">
+	                    <div class="form-group">
+		                  <label for="filtro-ordem">Ordenação</label>
+		                  <select class="form-control" id="filtro-ordem">
+			                <option>A-Z</option>
+			                <option>Z-A</option>
+		                  </select>
+	                    </div>
+                    </div>
+
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="filtro-status">Status</label>
+								<select class="form-control" id="filtro-status">
+									<option>Todos</option>
+									<option>Ativo</option>
+									<option>Inativo</option>
+								</select>
+							</div>
+						</div>
+						
+						<div class="col-md-2">
+							<div class="form-group">
+								<label>&nbsp;</label>
+								<div>
+									<button type="button" class="btn btn-primary btn-block">Filtrar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="content-card">
+					<div class="clearfix">
+						<h2 class="content-card-title pull-left">Especialidades Cadastradas</h2>
+						<a href="cadastro.html" class="btn btn-success pull-right"><span class="glyphicon glyphicon-plus"></span> Novo </a>
+					</div>
+					<div class="table-responsive">
+						<table class="table table-hover table-striped">
+							<thead>
+								<tr>
+									<th>ESPECIALIDADE</th>
+									<th>MÉDICO</th>
+									<th>DESCRIÇÃO</th>
+									<th>STATUS</th>
+									<th class="text-right">AÇÕES</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Cardiologia</td>
+									<th>Dr. Camilo Peixoto</th>
+									<td>Diagnóstico e tratamento de doenças do coração e do sistema circulatório.</td>
+									<td><span class="label-status active">Ativo</span></td>
+									<td class="text-right table-actions">
+										<a href="editar.html" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-pencil"></span>Editar</a>
+									</td>
+								</tr>
+
+                                <tr>
+									<td>Pediatria</td>
+									<th>Dra. Amanda Ferreira Lobato</th>
+									<td>Cuidado integral da saúde de crianças e adolescentes</td>
+									<td><span class="label-status active">Ativo</span></td>
+									<td class="text-right table-actions">
+										<a href="editar.html" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-pencil"></span>Editar</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Neurologia</td>
+									<th>Dr. Derek Shepherd</th>
+									<td> Doenças que afetam o sistema nervoso central e periférico</td>
+									<td><span class="label-status limited">Inativo</span></td>
+									<td class="text-right table-actions">
+										<a href="editar.html" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-pencil"></span>Editar</a>
+									</td>							
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../../assets/vendor/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

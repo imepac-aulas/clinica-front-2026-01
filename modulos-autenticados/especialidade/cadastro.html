@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt-BR">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cadastrar Especialidade | Administrativo | Clinica Vida Plena</title>
+	<link rel="stylesheet" href="../../../assets/vendor/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../../assets/css/modules.css">
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top app-navbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-menu" aria-expanded="false">
+					<span class="sr-only">Alternar navegacao</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../../index.html">Clinica Vida Plena</a>
+			</div>
+			<div class="collapse navbar-collapse" id="app-navbar-menu">
+				<ul class="nav navbar-nav">
+					<li><a href="../../index.html">Area Logada</a></li>
+					<li><a href="index.html">Administrativo / Especialidade</a></li>
+					<li class="active"><a href="cadastro.html">Cadastrar</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Usuario: Demo</a></li>
+					<li><a href="../../../index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid app-shell">
+		<div class="row">
+			<div class="col-md-3 col-lg-2">
+				<div class="app-sidebar">
+					<h2 class="app-sidebar-title">Especialidade</h2>
+					<ul class="nav nav-pills nav-stacked">
+						<li><a href="index.html">Visao geral</a></li>
+					
+						<li><a href="cadastro.html">Cadastrar especialidade</a></li>
+                        <li><a href="listar.html">Listar especialidades</a></li>
+						<li><a href="editar.html">Editar especialidade</a></li>
+						<li><a href="inativar.html">Inativar / Ativar</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-md-9 col-lg-10">
+				<div class="breadcrumb-wrap">
+					<ol class="breadcrumb">
+						<li><a href="../../index.html">Area Logada</a></li>
+						<li><a href="index.html">Especialidade</a></li>
+						<li class="active">Cadastrar especialidade</li>
+					</ol>
+				</div>
+
+				<div class="page-hero">
+					<h1>Nova Especialidade Medica</h1>
+					<p>Informe o nome, uma descricao curta e o status inicial. O sistema verificara automaticamente se ja existe uma especialidade com o mesmo nome antes de salvar.</p>
+				</div>
+
+				<form>
+					<div class="content-card">
+						<h2 class="form-section-title">Dados da especialidade</h2>
+
+						<div class="row">
+							<div class="col-md-8">
+								<div class="form-group">
+									<label for="nome-especialidade">Nome da especialidade</label>
+									<input type="text" class="form-control" id="nome-especialidade" placeholder="Ex.: Cardiologia, Dermatologia, Ortopedia">
+									<p class="help-block help-block-soft">O nome deve ser unico. O sistema bloqueia o cadastro caso ja exista uma especialidade identica.</p>
+								</div>
+								
+								<div class="form-group">
+									<label for="nome-">Médico(a) Responsável</label>
+									<input type="text" class="form-control" id="nome-especialidade" placeholder="Ex.: Adriana Passos">
+									<p class="help-block help-block-soft">Aqui deve conter o nome do médico responsável por determinada especialidade. </p>
+								</div>
+
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="status-especialidade">Status</label>
+									<select class="form-control" id="status-especialidade">
+										<option selected>Ativo</option>
+										<option>Inativo</option>
+									</select>
+									<p class="help-block help-block-soft">Especialidades inativas nao ficam disponiveis para agendamento.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="descricao-especialidade">Descricao curta</label>
+							<textarea class="form-control" id="descricao-especialidade" rows="4" placeholder="Descreva brevemente o escopo desta especialidade e os tipos de atendimento cobertos."></textarea>
+							<p class="help-block help-block-soft">Utilize uma descricao objetiva para facilitar a identificacao da especialidade por outros usuarios do sistema.</p>
+						</div>
+
+						<div class="form-actions clearfix">
+							<a href="index.html" class="btn btn-default">Cancelar</a>
+							<button type="button" class="btn btn-primary pull-right">Salvar</button>
+						</div>
+					</div>
+				</form>
+
+				</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../../assets/vendor/js/bootstrap.min.js"></script>
+	<script src="../../../assets/js/modules.js"></script>
+</body>
+</html>
