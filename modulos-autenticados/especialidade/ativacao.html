@@ -1,0 +1,413 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt-BR">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ativar / Inativar Especialidade | Administrativo | Clinica Vida Plena</title>
+    <link rel="stylesheet" href="../../../assets/vendor/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../assets/css/modules.css">
+    <style>
+        /* Status labels */
+        .label-status.active  { background:#5cb85c; color:#fff; padding:3px 8px; border-radius:3px; font-size:12px; }
+        .label-status.limited { background:#d9534f; color:#fff; padding:3px 8px; border-radius:3px; font-size:12px; }
+
+        /* Confirmation card */
+        .confirm-card {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 24px 28px;
+            background: #fff;
+            margin-top: 20px;
+        }
+        .confirm-card .confirm-icon {
+            font-size: 48px;
+            display: block;
+            margin-bottom: 12px;
+        }
+        .confirm-card.inativar { border-left: 5px solid #d9534f; }
+        .confirm-card.ativar   { border-left: 5px solid #5cb85c; }
+
+        .confirm-detail-row { margin-bottom: 8px; }
+        .confirm-detail-label { font-weight: bold; color: #555; min-width: 140px; display: inline-block; }
+
+        .btn-actions { margin-top: 20px; }
+        .btn-actions .btn + .btn { margin-left: 10px; }
+
+        /* Alert box */
+        .alert-confirm {
+            padding: 14px 18px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        .alert-confirm.inativar { background: #fdf2f2; border: 1px solid #f5c6cb; color: #721c24; }
+        .alert-confirm.ativar   { background: #f2fdf4; border: 1px solid #c3e6cb; color: #155724; }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top app-navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-menu" aria-expanded="false">
+                    <span class="sr-only">Alternar navegacao</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Clinica Vida Plena</a>
+            </div>
+            <div class="collapse navbar-collapse" id="app-navbar-menu">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../index.html">Area Logada</a></li>
+                    <li><a href="index.html">Administrativo / Especialidade</a></li>
+                    <li class="active"><a href="ativacao.html">Inativar / Ativar</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Usuario: Demo</a></li>
+                    <li><a href="../../../index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid app-shell">
+        <div class="row">
+            <div class="col-md-3 col-lg-2">
+                <div class="app-sidebar">
+                    <h2 class="app-sidebar-title">Especialidade</h2>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li><a href="index.html">Visao geral</a></li>
+                        <li><a href="cadastrar.html">Cadastrar especialidade</a></li>
+                        <li><a href="listar.html">Listar especialidade</a></li>
+                        <li><a href="editar.html">Editar especialidade</a></li>
+                        <li class="active"><a href="ativacao.html">Inativar/Ativar</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-9 col-lg-10">
+                <div class="breadcrumb-wrap">
+                    <ol class="breadcrumb">
+                        <li><a href="../../index.html">Area Logada</a></li>
+                        <li><a href="index.html">Especialidade</a></li>
+                        
+                        <li class="active">Inativar / Ativar</li>
+                    </ol>
+                </div>
+
+                <div class="page-hero">
+                    <h1>Inativar / Ativar Especialidade</h1>
+                    <p>Confirmação de alteração de status da especialidade selecionada.</p>
+                </div>               
+                
+                <div class="content-card" id="card-confirmacao">
+                    <h2 class="content-card-title">Confirmação da Ação</h2>
+
+                    <div class="alert-confirm" id="alerta-acao">
+                        <span class="glyphicon glyphicon-info-sign"></span>
+                        <strong>Atenção:</strong> <span id="alerta-texto"></span>
+                    </div>
+
+                    <div class="confirm-card" id="confirm-card">
+                        <div class="confirm-detail-row">
+                            <span class="confirm-detail-label">Especialidade:</span>
+                            Neurologia
+                        </div>
+                        <div class="confirm-detail-row">
+                            <span class="confirm-detail-label">Médico:</span>
+                            Dr. Derek Shepherd
+                        </div>
+                        <div class="confirm-detail-row">
+                            <span class="confirm-detail-label">Status Atual:</span>
+                            <span id="status-atual" class="label-status"></span>
+                        </div>
+                        <div class="confirm-detail-row">
+                            <span class="confirm-detail-label">Novo Status:</span>
+                            <span id="status-novo" class="label-status"></span>
+                        </div>
+                    </div>
+
+                    <div class="btn-actions">
+                        <button type="button" class="btn" id="btn-confirmar" onclick="confirmarAcao()">
+                        </button>
+                        <a href="listar.html" class="btn btn-default">
+                            <span class="glyphicon glyphicon-remove"></span> Cancelar
+                        </a>
+                    </div>
+                </div>                
+                <!-- ============================================================
+                     CARD: Inativas — cards individuais de confirmação
+                     ============================================================ -->
+                <div id="cards-inativas" style="display:none;"></div>
+
+                <div class="content-card" id="card-lista" style="display:none;">
+                    <h2 class="content-card-title">Especialidades Cadastradas</h2>
+
+                    <!-- Feedback de sucesso -->
+                    <div class="alert-confirm" id="alerta-sucesso" style="margin-bottom:16px;">
+                        <span class="glyphicon glyphicon-ok-circle"></span>
+                        <strong>Sucesso!</strong> <span id="sucesso-texto"></span>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th>ESPECIALIDADE</th>
+                                    <th>MÉDICO</th>
+                                    <th>DESCRIÇÃO</th>
+                                    <th>STATUS</th>
+                                    <th class="text-right">AÇÕES</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody-especialidades"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="../../../assets/vendor/js/bootstrap.min.js"></script>
+
+    <script>
+    // -----------------------------------------------------------------
+    // Estado das especialidades (simula o banco de dados no front-end)
+    // -----------------------------------------------------------------
+    var especialidades = [
+        { id: 1, nome: 'Cardiologia',  medico: 'Dr. Camilo Peixoto',         descricao: 'Diagnóstico e tratamento de doenças do coração e do sistema circulatório.', ativo: true  },
+        { id: 2, nome: 'Pediatria',    medico: 'Dra. Amanda Ferreira Lobato', descricao: 'Cuidado integral da saúde de crianças e adolescentes',                         ativo: true  },
+        { id: 3, nome: 'Neurologia',   medico: 'Dr. Derek Shepherd',          descricao: 'Doenças que afetam o sistema nervoso central e periférico',                    ativo: false }
+    ];
+
+    // -----------------------------------------------------------------
+    // Lê parâmetros da URL e renderiza o card de confirmação
+    // -----------------------------------------------------------------
+    var params   = new URLSearchParams(window.location.search);
+    var acaoId   = parseInt(params.get('id') || '3', 10);
+    var acaoParam = (params.get('acao') || 'ativar').toLowerCase();
+
+    
+    var acaoAtual = acaoParam;
+
+    function renderConfirmacao() {
+        var inativar = (acaoAtual === 'inativar');
+
+        // Alerta
+        var alertEl = document.getElementById('alerta-acao');
+        alertEl.className = 'alert-confirm ' + (inativar ? 'inativar' : 'ativar');
+        document.getElementById('alerta-texto').innerHTML =
+            'Você está prestes a <strong>' + (inativar ? 'inativar' : 'ativar') + '</strong> a especialidade abaixo. '
+            + (inativar
+                ? 'Especialidades inativas não estarão disponíveis para novos agendamentos.'
+                : 'Especialidades ativas ficam disponíveis para agendamentos de consultas.')
+            + ' Confirme a operação antes de prosseguir.';
+
+        
+        var cardEl = document.getElementById('confirm-card');
+        cardEl.className = 'confirm-card ' + (inativar ? 'inativar' : 'ativar');
+
+        // Badges de status
+        var statusAtual = document.getElementById('status-atual');
+        var statusNovo  = document.getElementById('status-novo');
+
+        statusAtual.className = 'label-status ' + (inativar ? 'active'   : 'limited');
+        statusAtual.textContent = inativar ? 'Ativo' : 'Inativo';
+
+        statusNovo.className  = 'label-status ' + (inativar ? 'limited'  : 'active');
+        statusNovo.textContent = inativar ? 'Inativo' : 'Ativo';
+
+        
+        // Botão confirmar
+        var btn = document.getElementById('btn-confirmar');
+        btn.className = 'btn ' + (inativar ? 'btn-danger' : 'btn-success');
+        btn.innerHTML = inativar
+            ? '<span class="glyphicon glyphicon-off"></span> Confirmar Inativação'
+            : '<span class="glyphicon glyphicon-ok"></span> Confirmar Ativação';
+    }
+
+    
+    function confirmarAcao() {
+        var inativar = (acaoAtual === 'inativar');
+
+        // Aplica a mudança no array de estado
+        var esp = especialidades.find(function(e) { return e.id === acaoId; });
+        if (esp) { esp.ativo = !inativar; }
+
+        // Monta o feedback de sucesso
+        var alertSucesso = document.getElementById('alerta-sucesso');
+        alertSucesso.className = 'alert-confirm ' + (inativar ? 'inativar' : 'ativar');
+        document.getElementById('sucesso-texto').innerHTML =
+            'A especialidade <strong>' + (esp ? esp.nome : '') + '</strong> foi '
+            + (inativar ? 'inativada' : 'ativada') + ' com sucesso.';
+
+        // Renderiza a tabela
+        renderLista();
+
+        // Alterna a ação para a próxima possível (toggle)
+        acaoAtual = inativar ? 'ativar' : 'inativar';
+
+        // Atualiza o card de confirmação já preparado para o próximo clique
+        renderConfirmacao();
+
+        // Troca os cards: esconde confirmação, exibe lista
+        document.getElementById('card-confirmacao').style.display = 'none';
+        document.getElementById('card-lista').style.display = 'block';
+
+        // Scroll suave até a lista
+        document.getElementById('card-lista').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // -----------------------------------------------------------------
+    // Renderiza as linhas da tabela de especialidades
+    // -----------------------------------------------------------------
+    function renderLista() {
+        var tbody = document.getElementById('tbody-especialidades');
+        tbody.innerHTML = '';
+
+        especialidades.forEach(function(esp) {
+            var ativo     = esp.ativo;
+            var statusCls = ativo ? 'active'      : 'limited';
+            var statusTxt = ativo ? 'Ativo'        : 'Inativo';
+            var btnCls    = ativo ? 'btn-danger'   : 'btn-success';
+            var btnIcon   = ativo ? 'glyphicon-off': 'glyphicon-ok';
+            var btnTxt    = ativo ? 'Inativar'     : 'Ativar';
+
+            var tr = document.createElement('tr');
+            tr.innerHTML =
+                '<td>' + esp.nome + '</td>'
+                + '<td>' + esp.medico + '</td>'
+                + '<td>' + esp.descricao + '</td>'
+                + '<td><span class="label-status ' + statusCls + '">' + statusTxt + '</span></td>'
+                + '<td class="text-right table-actions">'
+                +   '<a href="editar.html" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-pencil"></span> Editar</a> '
+                +   '<button type="button" class="btn ' + btnCls + ' btn-sm" onclick="alternarStatus(' + esp.id + ')">'
+                +     '<span class="glyphicon ' + btnIcon + '"></span> ' + btnTxt
+                +   '</button>'
+                + '</td>';
+            tbody.appendChild(tr);
+        });
+
+        renderCardsInativas();
+    }
+
+    // -----------------------------------------------------------------
+    // Renderiza cards individuais de confirmação para cada inativa
+    // -----------------------------------------------------------------
+    function renderCardsInativas() {
+        var wrap = document.getElementById('cards-inativas');
+        var inativas = especialidades.filter(function(e) { return !e.ativo; });
+
+        if (inativas.length === 0) {
+            wrap.style.display = 'none';
+            wrap.innerHTML = '';
+            return;
+        }
+
+        wrap.style.display = 'block';
+        wrap.innerHTML = '';
+
+        inativas.forEach(function(esp) {
+            var card = document.createElement('div');
+            card.className = 'content-card';
+            card.id = 'card-inativa-' + esp.id;
+            card.innerHTML =
+                '<h2 class="content-card-title">Confirmação de Ativação — ' + esp.nome + '</h2>'
+
+                // alerta
+                + '<div class="alert-confirm ativar">'
+                +   '<span class="glyphicon glyphicon-info-sign"></span> '
+                +   '<strong>Atenção:</strong> Você está prestes a <strong>ativar</strong> a especialidade abaixo. '
+                +   'Especialidades ativas ficam disponíveis para agendamentos de consultas. '
+                +   'Confirme a operação antes de prosseguir.'
+                + '</div>'
+
+                // dados resumidos
+                + '<div class="confirm-card ativar">'
+                +   '<div class="confirm-detail-row"><span class="confirm-detail-label">Especialidade:</span> ' + esp.nome + '</div>'
+                +   '<div class="confirm-detail-row"><span class="confirm-detail-label">Médico:</span> ' + esp.medico + '</div>'
+                +   '<div class="confirm-detail-row"><span class="confirm-detail-label">Descrição:</span> ' + esp.descricao + '</div>'
+                +   '<div class="confirm-detail-row"><span class="confirm-detail-label">Status Atual:</span> <span class="label-status limited">Inativo</span></div>'
+                +   '<div class="confirm-detail-row"><span class="confirm-detail-label">Novo Status:</span> <span class="label-status active">Ativo</span></div>'
+                + '</div>'
+
+                // botões
+                + '<div class="btn-actions">'
+                +   '<button type="button" class="btn btn-success" onclick="ativarDaLista(' + esp.id + ')">'
+                +     '<span class="glyphicon glyphicon-ok"></span> Confirmar Ativação'
+                +   '</button>'
+                +   '<button type="button" class="btn btn-default" style="margin-left:10px;" onclick="descartarCardInativa(' + esp.id + ')">'
+                +     '<span class="glyphicon glyphicon-remove"></span> Descartar'
+                +   '</button>'
+                + '</div>';
+
+            wrap.appendChild(card);
+        });
+    }
+
+    // -----------------------------------------------------------------
+    // Ativa especialidade direto pelo card de inativa
+    // -----------------------------------------------------------------
+    function ativarDaLista(id) {
+        var esp = especialidades.find(function(e) { return e.id === id; });
+        if (!esp) return;
+
+        esp.ativo = true;
+
+        // Feedback na lista principal
+        var alertSucesso = document.getElementById('alerta-sucesso');
+        alertSucesso.className = 'alert-confirm ativar';
+        document.getElementById('sucesso-texto').innerHTML =
+            'A especialidade <strong>' + esp.nome + '</strong> foi ativada com sucesso.';
+
+        renderLista();
+    }
+
+    // -----------------------------------------------------------------
+    // Remove card individual de inativa sem alterar status
+    // -----------------------------------------------------------------
+    function descartarCardInativa(id) {
+        var card = document.getElementById('card-inativa-' + id);
+        if (card) { card.parentNode.removeChild(card); }
+
+        // Se não sobrar nenhum card, oculta o wrapper
+        var wrap = document.getElementById('cards-inativas');
+        if (wrap && wrap.children.length === 0) {
+            wrap.style.display = 'none';
+        }
+    }
+
+    // -----------------------------------------------------------------
+    // Alterna status direto da lista (botões Ativar/Inativar da tabela)
+    // -----------------------------------------------------------------
+    function alternarStatus(id) {
+        var esp = especialidades.find(function(e) { return e.id === id; });
+        if (!esp) return;
+
+        esp.ativo = !esp.ativo;
+
+        // Se for a especialidade em foco, sincroniza a ação do card de confirmação
+        if (id === acaoId) {
+            acaoAtual = esp.ativo ? 'inativar' : 'ativar';
+        }
+
+        // Atualiza feedback
+        var alertSucesso = document.getElementById('alerta-sucesso');
+        alertSucesso.className = 'alert-confirm ' + (esp.ativo ? 'ativar' : 'inativar');
+        document.getElementById('sucesso-texto').innerHTML =
+            'A especialidade <strong>' + esp.nome + '</strong> foi '
+            + (esp.ativo ? 'ativada' : 'inativada') + ' com sucesso.';
+
+        renderLista();
+    }
+
+    // -----------------------------------------------------------------
+    // Inicialização
+    // -----------------------------------------------------------------
+    renderConfirmacao();
+    </script>
+</body>
+</html>
