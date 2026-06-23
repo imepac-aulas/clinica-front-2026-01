@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Sistema de Convênios</title>
+
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+
+    <div class="container">
+
+      <div class="navbar-header">
+
+        <button type="button"
+          class="navbar-toggle collapsed"
+          data-toggle="collapse"
+          data-target="#menu">
+
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+
+        </button>
+
+        <a class="navbar-brand" href="#">
+          Clínica Vida Plena
+        </a>
+
+      </div>
+
+      <div class="collapse navbar-collapse" id="menu">
+
+        <ul class="nav navbar-nav">
+
+          <li class="active">
+            <a href="#">
+              Convênios
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              Pacientes
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              Consultas
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="container">
+
+      <h1>Gestão de Convênios</h1>
+
+      <p>
+        Cadastro, controle e gerenciamento de convênios médicos
+        com organização, praticidade e segurança.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTEÚDO -->
+  <div class="container main-container">
+
+
+    <!-- FORM -->
+    <div class="panel panel-default">
+
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          Cadastro de Convênio
+        </h3>
+      </div>
+
+      <div class="panel-body">
+
+        <form id="formConvenio">
+
+          <input type="hidden" id="id">
+
+          <div class="row">
+
+            <div class="col-md-6">
+
+              <div class="form-group">
+
+                <label>Nome do Convênio</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nome"
+                  placeholder="Digite o nome"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+              <div class="form-group">
+
+                <label>Código</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="codigo"
+                  placeholder="Digite o código"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="row">
+
+            <div class="col-md-6">
+
+              <div class="form-group">
+
+                <label>Tipo de Cobertura</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="tipoCobertura"
+                  placeholder="Ex: Completa"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+              <div class="form-group">
+
+                <label>Contato</label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="contato"
+                  placeholder="(00) 00000-0000"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg">
+            Salvar Convênio
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+
+    <!-- FILTROS -->
+    <div class="panel panel-default">
+
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          Pesquisa de Convênios
+        </h3>
+      </div>
+
+      <div class="panel-body">
+
+        <div class="row">
+
+          <div class="col-md-5">
+
+            <input
+              type="text"
+              id="busca"
+              class="form-control"
+              placeholder="Buscar por nome ou código"
+            >
+
+          </div>
+
+          <div class="col-md-3">
+
+            <select id="statusFiltro" class="form-control">
+
+              <option value="">
+                Todos
+              </option>
+
+              <option value="true">
+                Ativos
+              </option>
+
+              <option value="false">
+                Inativos
+              </option>
+
+            </select>
+
+          </div>
+
+          <div class="col-md-2">
+
+            <button
+              onclick="listarConvenios()"
+              class="btn btn-success btn-block">
+
+              Buscar
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- TABELA -->
+    <div class="panel panel-default">
+
+      <div class="panel-heading">
+
+        <h3 class="panel-title">
+          Lista de Convênios
+        </h3>
+
+      </div>
+
+      <div class="panel-body">
+
+        <div class="table-responsive">
+
+          <table class="table table-striped table-hover">
+
+            <thead>
+
+              <tr>
+
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Código</th>
+                <th>Cobertura</th>
+                <th>Contato</th>
+                <th>Status</th>
+                <th>Ações</th>
+
+              </tr>
+
+            </thead>
+
+            <tbody id="tabelaConvenios"></tbody>
+
+          </table>
+
+        </div>
+
+
+        <!-- PAGINAÇÃO -->
+        <div class="text-center paginacao">
+
+          <button
+            onclick="paginaAnterior()"
+            class="btn btn-default">
+
+            Anterior
+
+          </button>
+
+          <span id="paginaAtual">
+            Página 1
+          </span>
+
+          <button
+            onclick="proximaPagina()"
+            class="btn btn-default">
+
+            Próxima
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="container text-center">
+
+      <p>
+        Clínica Vida Plena © 2026
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

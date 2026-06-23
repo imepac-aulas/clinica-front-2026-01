@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt-BR">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cadastrar Perfil | Administrativo | Clinica Vida Plena</title>
+	<link rel="stylesheet" href="../../../assets/vendor/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../../assets/css/modules.css">
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top app-navbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-menu" aria-expanded="false">
+					<span class="sr-only">Alternar navegacao</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../../index.html">Clinica Vida Plena</a>
+			</div>
+			<div class="collapse navbar-collapse" id="app-navbar-menu">
+				<ul class="nav navbar-nav">
+					<li><a href="../../index.html">Area Logada</a></li>
+					<li><a href="index.html">Administrativo / Perfil</a></li>
+					<li class="active"><a href="cadastro.html">Cadastrar</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Usuario: Demo</a></li>
+					<li><a href="../../../index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid app-shell">
+		<div class="row">
+			<div class="col-md-3 col-lg-2">
+				<div class="app-sidebar">
+					<h2 class="app-sidebar-title">Perfil</h2>
+					<ul class="nav nav-pills nav-stacked">
+						<li><a href="index.html">Visao geral</a></li>
+						<li class="active"><a href="cadastro.html">Cadastrar perfil</a></li>
+						<li><a href="lista.html">Listar perfis</a></li>
+						<li><a href="editar.html">Editar perfil</a></li>
+						<li><a href="permissoes.html">Definir permissoes</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-md-9 col-lg-10">
+				<div class="breadcrumb-wrap">
+					<ol class="breadcrumb">
+						<li><a href="../../index.html">Area Logada</a></li>
+						<li><a href="index.html">Perfil</a></li>
+						<li class="active">Cadastrar perfil</li>
+					</ol>
+				</div>
+
+				<div class="page-hero">
+					<h1>Novo Perfil de Usuario</h1>
+					<p>Formulario de criacao de perfil com definicao de dados principais, permissoes por modulo e observacoes finais.</p>
+				</div>
+
+				<form>
+					<div class="content-card">
+						<h2 class="form-section-title">Dados principais</h2>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="nome-perfil">Nome do perfil</label>
+									<input type="text" class="form-control" id="nome-perfil" placeholder="Ex.: Recepcao Senior">
+									<p class="help-block help-block-soft">Utilize um nome claro para facilitar a identificacao do nivel de acesso.</p>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+									<label for="nivel-acesso">Nivel de acesso</label>
+									<select class="form-control" id="nivel-acesso">
+										<option>Selecione</option>
+										<option>Basico</option>
+										<option>Intermediario</option>
+										<option>Avancado</option>
+										<option>Administrativo</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+									<label for="status-perfil">Status</label>
+									<select class="form-control" id="status-perfil">
+										<option>Ativo</option>
+										<option>Inativo</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="descricao-perfil">Descricao</label>
+							<textarea class="form-control" id="descricao-perfil" rows="4" placeholder="Descreva em quais situacoes esse perfil deve ser utilizado."></textarea>
+						</div>
+					</div>
+
+					<div class="content-card">
+						<h2 class="form-section-title">Permissoes de acesso</h2>
+						<p class="help-block help-block-soft">Selecione as funcionalidades que este perfil podera acessar em cada modulo do sistema.</p>
+
+						<div class="permission-panel">
+							<div class="permission-panel-heading clearfix">
+								<h4 class="pull-left">Administrativo</h4>
+								<label class="checkbox-inline pull-right"><input type="checkbox" class="js-select-all"> Selecionar tudo</label>
+							</div>
+							<div class="permission-panel-body">
+								<div class="permission-list row">
+									<div class="col-md-6">
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Visualizar perfis</label></div>
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Cadastrar perfis</label></div>
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Editar perfis</label></div>
+									</div>
+									<div class="col-md-6">
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Inativar perfis</label></div>
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Vincular funcionarios</label></div>
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Exportar relatorios</label></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="permission-panel">
+							<div class="permission-panel-heading clearfix">
+								<h4 class="pull-left">Agendamento</h4>
+								<label class="checkbox-inline pull-right"><input type="checkbox" class="js-select-all"> Selecionar tudo</label>
+							</div>
+							<div class="permission-panel-body">
+								<div class="permission-list row">
+									<div class="col-md-6">
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Visualizar agenda</label></div>
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Agendar consulta</label></div>
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Confirmar consulta</label></div>
+									</div>
+									<div class="col-md-6">
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Cancelar consulta</label></div>
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Reagendar consulta</label></div>
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Visualizar historico do paciente</label></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="permission-panel">
+							<div class="permission-panel-heading clearfix">
+								<h4 class="pull-left">Atendimento</h4>
+								<label class="checkbox-inline pull-right"><input type="checkbox" class="js-select-all"> Selecionar tudo</label>
+							</div>
+							<div class="permission-panel-body">
+								<div class="permission-list row">
+									<div class="col-md-6">
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Abrir prontuario</label></div>
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Registrar anamnese</label></div>
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Registrar evolucao clinica</label></div>
+									</div>
+									<div class="col-md-6">
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Registrar conduta</label></div>
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Consultar historico</label></div>
+										<div class="checkbox"><label><input type="checkbox" class="js-permission-item"> Encerrar atendimento</label></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="page-note">
+							Este comportamento de marcacao e apenas visual. O objetivo e demonstrar como a tela pode ser organizada para posterior integracao com regras reais de permissao.
+						</div>
+					</div>
+
+					<div class="content-card">
+						<h2 class="form-section-title">Observacoes finais</h2>
+						<div class="form-group">
+							<label for="observacoes">Observacoes</label>
+							<textarea class="form-control" id="observacoes" rows="4" placeholder="Inclua observacoes de uso, restricoes ou regras de negocio relacionadas ao perfil."></textarea>
+						</div>
+						<div class="form-actions clearfix">
+							<a href="index.html" class="btn btn-default">Cancelar</a>
+							<button type="button" class="btn btn-primary pull-right">Salvar perfil</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../../assets/vendor/js/bootstrap.min.js"></script>
+	<script src="../../../assets/js/modules.js"></script>
+</body>
+</html>
