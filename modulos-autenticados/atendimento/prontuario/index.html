@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt-BR">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Prontuario | Atendimento | Clinica Vida Plena</title>
+	<link rel="stylesheet" href="../../../assets/vendor/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../../assets/css/modules.css">
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top app-navbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-menu" aria-expanded="false">
+					<span class="sr-only">Alternar navegacao</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../../index.html">Clinica Vida Plena</a>
+			</div>
+			<div class="collapse navbar-collapse" id="app-navbar-menu">
+				<ul class="nav navbar-nav">
+					<li><a href="../../index.html">Area Logada</a></li>
+					<li class="active"><a href="index.html">Atendimento / Prontuario</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Usuario: Demo</a></li>
+					<li><a href="../../../index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid app-shell">
+		<div class="row">
+			<div class="col-md-3 col-lg-2">
+				<div class="app-sidebar">
+					<h2 class="app-sidebar-title">Prontuario</h2>
+					<ul class="nav nav-pills nav-stacked">
+						<li class="active"><a href="index.html">Abrir prontuario</a></li>
+						<li><a href="anamnese.html">Registrar anamnese</a></li>
+						<li><a href="evolucao.html">Evolucao clinica</a></li>
+						<li><a href="conduta.html">Conduta/orientacoes</a></li>
+						<li><a href="historico.html">Historico</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-md-9 col-lg-10">
+				<div class="breadcrumb-wrap">
+					<ol class="breadcrumb">
+						<li><a href="../../index.html">Area Logada</a></li>
+						<li>Atendimento</li>
+						<li class="active">Prontuario</li>
+					</ol>
+				</div>
+
+				<div class="page-hero">
+					<h1>Abrir Prontuario do Paciente</h1>
+					<p>Consulta inicial do prontuario com identificacao do paciente, resumo clinico recente e atalhos para os registros do atendimento.</p>
+				</div>
+
+				<div class="content-card filter-bar">
+					<h2 class="content-card-title">Localizar paciente</h2>
+					<div class="row">
+						<div class="col-md-5">
+							<div class="form-group">
+								<label for="busca-paciente">Nome, CPF ou numero do prontuario</label>
+								<input type="text" class="form-control" id="busca-paciente" value="Maria Oliveira - PR-000124">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="data-atendimento">Data do atendimento</label>
+								<input type="date" class="form-control" id="data-atendimento" value="2026-06-23">
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+								<label>&nbsp;</label>
+								<button type="button" class="btn btn-primary btn-block">Abrir</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="content-card">
+					<h2 class="content-card-title">Identificacao do paciente</h2>
+					<div class="row">
+						<div class="col-md-3"><p><strong>Paciente:</strong><br>Maria Oliveira</p></div>
+						<div class="col-md-3"><p><strong>Prontuario:</strong><br>PR-000124</p></div>
+						<div class="col-md-3"><p><strong>Nascimento:</strong><br>14/08/1988</p></div>
+						<div class="col-md-3"><p><strong>Convenio:</strong><br>Vida Plena Saude</p></div>
+					</div>
+					<div class="row">
+						<div class="col-md-3"><p><strong>Medico:</strong><br>Dra. Ana Souza</p></div>
+						<div class="col-md-3"><p><strong>Especialidade:</strong><br>Clinica Geral</p></div>
+						<div class="col-md-3"><p><strong>Ultimo atendimento:</strong><br>10/05/2026</p></div>
+						<div class="col-md-3"><p><strong>Status:</strong><br><span class="label-status active">Em atendimento</span></p></div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 col-lg-3">
+						<a class="action-card" href="anamnese.html">
+							<span class="glyphicon glyphicon-list-alt"></span>
+							<h3>Anamnese</h3>
+							<p>Registrar queixa principal, historia atual e antecedentes clinicos do paciente.</p>
+							<span class="text-link">Registrar</span>
+						</a>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<a class="action-card" href="evolucao.html">
+							<span class="glyphicon glyphicon-heart"></span>
+							<h3>Evolucao Clinica</h3>
+							<p>Descrever achados, avaliacao e progresso observado durante o atendimento.</p>
+							<span class="text-link">Registrar</span>
+						</a>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<a class="action-card" href="conduta.html">
+							<span class="glyphicon glyphicon-ok-sign"></span>
+							<h3>Conduta</h3>
+							<p>Informar prescricoes, exames solicitados e orientacoes de retorno.</p>
+							<span class="text-link">Registrar</span>
+						</a>
+					</div>
+					<div class="col-md-6 col-lg-3">
+						<a class="action-card" href="historico.html">
+							<span class="glyphicon glyphicon-time"></span>
+							<h3>Historico</h3>
+							<p>Consultar linha do tempo de atendimentos e evolucoes anteriores.</p>
+							<span class="text-link">Consultar</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../../assets/vendor/js/bootstrap.min.js"></script>
+</body>
+</html>

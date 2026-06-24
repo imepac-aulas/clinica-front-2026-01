@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt-BR">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Conduta | Prontuario | Clinica Vida Plena</title>
+	<link rel="stylesheet" href="../../../assets/vendor/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../../assets/css/modules.css">
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top app-navbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-menu" aria-expanded="false">
+					<span class="sr-only">Alternar navegacao</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../../index.html">Clinica Vida Plena</a>
+			</div>
+			<div class="collapse navbar-collapse" id="app-navbar-menu">
+				<ul class="nav navbar-nav">
+					<li><a href="../../index.html">Area Logada</a></li>
+					<li><a href="index.html">Atendimento / Prontuario</a></li>
+					<li class="active"><a href="conduta.html">Conduta</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Usuario: Demo</a></li>
+					<li><a href="../../../index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid app-shell">
+		<div class="row">
+			<div class="col-md-3 col-lg-2">
+				<div class="app-sidebar">
+					<h2 class="app-sidebar-title">Prontuario</h2>
+					<ul class="nav nav-pills nav-stacked">
+						<li><a href="index.html">Abrir prontuario</a></li>
+						<li><a href="anamnese.html">Registrar anamnese</a></li>
+						<li><a href="evolucao.html">Evolucao clinica</a></li>
+						<li class="active"><a href="conduta.html">Conduta/orientacoes</a></li>
+						<li><a href="historico.html">Historico</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-md-9 col-lg-10">
+				<div class="breadcrumb-wrap">
+					<ol class="breadcrumb">
+						<li><a href="../../index.html">Area Logada</a></li>
+						<li><a href="index.html">Prontuario</a></li>
+						<li class="active">Conduta e orientacoes</li>
+					</ol>
+				</div>
+
+				<div class="page-hero">
+					<h1>Registrar Conduta e Orientacoes</h1>
+					<p>Fechamento do atendimento com prescricao, exames solicitados, orientacoes ao paciente e retorno.</p>
+				</div>
+
+				<form>
+					<div class="content-card">
+						<h2 class="form-section-title">Conduta do atendimento</h2>
+						<div class="form-group">
+							<label for="prescricao">Prescricao e conduta</label>
+							<textarea class="form-control" id="prescricao" rows="5" placeholder="Registre medicamentos, dose, frequencia, duracao e demais condutas."></textarea>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="exames">Exames solicitados</label>
+									<textarea class="form-control" id="exames" rows="5" placeholder="Liste exames laboratoriais, imagem ou encaminhamentos."></textarea>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="orientacoes">Orientacoes ao paciente</label>
+									<textarea class="form-control" id="orientacoes" rows="5" placeholder="Inclua repouso, sinais de alerta, cuidados em casa e orientacoes gerais."></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="retorno">Retorno</label>
+									<select class="form-control" id="retorno">
+										<option>Sem retorno programado</option>
+										<option>Retorno em 7 dias</option>
+										<option>Retorno em 15 dias</option>
+										<option>Retorno em 30 dias</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="status">Status do atendimento</label>
+									<select class="form-control" id="status">
+										<option>Em atendimento</option>
+										<option selected>Finalizado</option>
+										<option>Aguardando exames</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="form-actions clearfix">
+							<a href="evolucao.html" class="btn btn-default">Voltar</a>
+							<a href="historico.html" class="btn btn-primary pull-right">Finalizar atendimento</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../../assets/vendor/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt-BR">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Historico | Prontuario | Clinica Vida Plena</title>
+	<link rel="stylesheet" href="../../../assets/vendor/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../../assets/css/modules.css">
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top app-navbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-menu" aria-expanded="false">
+					<span class="sr-only">Alternar navegacao</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../../index.html">Clinica Vida Plena</a>
+			</div>
+			<div class="collapse navbar-collapse" id="app-navbar-menu">
+				<ul class="nav navbar-nav">
+					<li><a href="../../index.html">Area Logada</a></li>
+					<li><a href="index.html">Atendimento / Prontuario</a></li>
+					<li class="active"><a href="historico.html">Historico</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Usuario: Demo</a></li>
+					<li><a href="../../../index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid app-shell">
+		<div class="row">
+			<div class="col-md-3 col-lg-2">
+				<div class="app-sidebar">
+					<h2 class="app-sidebar-title">Prontuario</h2>
+					<ul class="nav nav-pills nav-stacked">
+						<li><a href="index.html">Abrir prontuario</a></li>
+						<li><a href="anamnese.html">Registrar anamnese</a></li>
+						<li><a href="evolucao.html">Evolucao clinica</a></li>
+						<li><a href="conduta.html">Conduta/orientacoes</a></li>
+						<li class="active"><a href="historico.html">Historico</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-md-9 col-lg-10">
+				<div class="breadcrumb-wrap">
+					<ol class="breadcrumb">
+						<li><a href="../../index.html">Area Logada</a></li>
+						<li><a href="index.html">Prontuario</a></li>
+						<li class="active">Historico</li>
+					</ol>
+				</div>
+
+				<div class="page-hero">
+					<h1>Historico de Atendimentos e Evolucoes</h1>
+					<p>Linha do tempo do paciente com atendimentos anteriores, evolucoes registradas, condutas e profissionais responsaveis.</p>
+				</div>
+
+				<div class="content-card filter-bar">
+					<h2 class="content-card-title">Filtros</h2>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+								<label for="paciente">Paciente</label>
+								<input type="text" class="form-control" id="paciente" value="Maria Oliveira - PR-000124">
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="periodo">Periodo</label>
+								<select class="form-control" id="periodo">
+									<option>Ultimos 30 dias</option>
+									<option selected>Ultimos 90 dias</option>
+									<option>Ultimo ano</option>
+									<option>Todo o historico</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="form-group">
+								<label for="profissional">Profissional</label>
+								<select class="form-control" id="profissional">
+									<option>Todos</option>
+									<option>Dra. Ana Souza</option>
+									<option>Dr. Carlos Lima</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="form-group">
+								<label>&nbsp;</label>
+								<button type="button" class="btn btn-primary btn-block">Filtrar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="content-card">
+					<div class="clearfix">
+						<h2 class="content-card-title pull-left">Linha do tempo clinica</h2>
+						<a href="anamnese.html" class="btn btn-success pull-right"><span class="glyphicon glyphicon-plus"></span> Novo registro</a>
+					</div>
+					<div class="table-responsive">
+						<table class="table table-hover table-striped">
+							<thead>
+								<tr>
+									<th>Data</th>
+									<th>Profissional</th>
+									<th>Tipo</th>
+									<th>Resumo da evolucao</th>
+									<th>Conduta</th>
+									<th class="text-right">Acoes</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>23/06/2026</td>
+									<td>Dra. Ana Souza</td>
+									<td>Clinica Geral</td>
+									<td>Cefaleia moderada, sem sinais neurologicos de alarme.</td>
+									<td>Analgesico, hidratacao e retorno se piora.</td>
+									<td class="text-right table-actions">
+										<a href="index.html" class="btn btn-default btn-sm">Abrir</a>
+									</td>
+								</tr>
+								<tr>
+									<td>10/05/2026</td>
+									<td>Dr. Carlos Lima</td>
+									<td>Retorno</td>
+									<td>Melhora de sintomas respiratorios apos tratamento inicial.</td>
+									<td>Manter orientacoes e alta do episodio.</td>
+									<td class="text-right table-actions">
+										<a href="index.html" class="btn btn-default btn-sm">Abrir</a>
+									</td>
+								</tr>
+								<tr>
+									<td>18/04/2026</td>
+									<td>Dra. Ana Souza</td>
+									<td>Primeira consulta</td>
+									<td>Queixa de tosse seca e congestao nasal ha cinco dias.</td>
+									<td>Solicitado hemograma e orientadas medidas sintomaticas.</td>
+									<td class="text-right table-actions">
+										<a href="index.html" class="btn btn-default btn-sm">Abrir</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../../assets/vendor/js/bootstrap.min.js"></script>
+</body>
+</html>
