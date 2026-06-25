@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt-BR">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cancelar Consulta | Agendamento | Clinica Vida Plena</title>
+	<link rel="stylesheet" href="../../../assets/vendor/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../../assets/css/modules.css">
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top app-navbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-menu" aria-expanded="false">
+					<span class="sr-only">Alternar navegacao</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../../index.html">Clinica Vida Plena</a>
+			</div>
+			<div class="collapse navbar-collapse" id="app-navbar-menu">
+				<ul class="nav navbar-nav">
+					<li><a href="../../index.html">Area Logada</a></li>
+					<li><a href="index.html">Agendamento / Consulta</a></li>
+					<li class="active"><a href="cancelar.html">Cancelar Consulta</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Usuario: Demo</a></li>
+					<li><a href="../../../index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid app-shell">
+		<div class="row">
+			<div class="col-md-3 col-lg-2">
+				<div class="app-sidebar">
+					<h2 class="app-sidebar-title">Consulta (Agenda)</h2>
+					<ul class="nav nav-pills nav-stacked">
+						<li><a href="index.html">Visao geral</a></li>
+						<li><a href="agendar.html">Agendar consulta</a></li>
+						<li><a href="reagendar.html">Reagendar consulta</a></li>
+						<li class="active"><a href="cancelar.html">Cancelar consulta</a></li>
+						<li><a href="confirmar.html">Confirmar consulta</a></li>
+						<li><a href="visualizar.html">Visualizar agenda</a></li>
+						<li><a href="registrar.html">Registrar status</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-md-9 col-lg-10">
+				<div class="breadcrumb-wrap">
+					<ol class="breadcrumb">
+						<li><a href="../../index.html">Area Logada</a></li>
+						<li><a href="index.html">Consulta (Agenda)</a></li>
+						<li class="active">Cancelar consulta</li>
+					</ol>
+				</div>
+
+				<div class="page-hero">
+					<h1>Cancelar Consulta</h1>
+					<p>Registro de cancelamento com motivo, responsavel e orientacao de retorno.</p>
+				</div>
+
+				<form>
+					<div class="content-card">
+						<h2 class="form-section-title">Dados da consulta</h2>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="consulta-cancelar">Consulta / Paciente</label>
+									<input type="text" class="form-control" id="consulta-cancelar" placeholder="Informe paciente, protocolo ou CPF">
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+									<label for="data-consulta">Data da consulta</label>
+									<input type="date" class="form-control" id="data-consulta">
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+									<label for="hora-consulta">Hora da consulta</label>
+									<input type="time" class="form-control" id="hora-consulta">
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="motivo-cancelamento">Motivo do cancelamento</label>
+									<select class="form-control" id="motivo-cancelamento">
+										<option>Selecione</option>
+										<option>Desistencia do paciente</option>
+										<option>Indisponibilidade do medico</option>
+										<option>Conflito de horario</option>
+										<option>Outro</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="cancelado-por">Cancelado por</label>
+									<select class="form-control" id="cancelado-por">
+										<option>Recepcao</option>
+										<option>Paciente</option>
+										<option>Medico</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="observacoes-cancelamento">Observacoes</label>
+							<textarea class="form-control" id="observacoes-cancelamento" rows="4" placeholder="Inclua detalhes relevantes e orientacao de retorno para o paciente."></textarea>
+						</div>
+						<div class="form-actions clearfix">
+							<a href="index.html" class="btn btn-default">Voltar</a>
+							<button type="button" class="btn btn-primary pull-right">Confirmar cancelamento</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../../assets/vendor/js/bootstrap.min.js"></script>
+	<script src="../../../assets/js/modules.js"></script>
+</body>
+</html>

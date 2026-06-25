@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt-BR">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Confirmar Consulta | Agendamento | Clinica Vida Plena</title>
+	<link rel="stylesheet" href="../../../assets/vendor/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../../assets/css/modules.css">
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top app-navbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-menu" aria-expanded="false">
+					<span class="sr-only">Alternar navegacao</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../../index.html">Clinica Vida Plena</a>
+			</div>
+			<div class="collapse navbar-collapse" id="app-navbar-menu">
+				<ul class="nav navbar-nav">
+					<li><a href="../../index.html">Area Logada</a></li>
+					<li><a href="index.html">Agendamento / Consulta</a></li>
+					<li class="active"><a href="confirmar.html">Confirmar Consulta</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Usuario: Demo</a></li>
+					<li><a href="../../../index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid app-shell">
+		<div class="row">
+			<div class="col-md-3 col-lg-2">
+				<div class="app-sidebar">
+					<h2 class="app-sidebar-title">Consulta (Agenda)</h2>
+					<ul class="nav nav-pills nav-stacked">
+						<li><a href="index.html">Visao geral</a></li>
+						<li><a href="agendar.html">Agendar consulta</a></li>
+						<li><a href="reagendar.html">Reagendar consulta</a></li>
+						<li><a href="cancelar.html">Cancelar consulta</a></li>
+						<li class="active"><a href="confirmar.html">Confirmar consulta</a></li>
+						<li><a href="visualizar.html">Visualizar agenda</a></li>
+						<li><a href="registrar.html">Registrar status</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="col-md-9 col-lg-10">
+				<div class="breadcrumb-wrap">
+					<ol class="breadcrumb">
+						<li><a href="../../index.html">Area Logada</a></li>
+						<li><a href="index.html">Consulta (Agenda)</a></li>
+						<li class="active">Confirmar consulta</li>
+					</ol>
+				</div>
+
+				<div class="page-hero">
+					<h1>Confirmar Consulta</h1>
+					<p>Confirme o comparecimento do paciente e registre canal, horario e responsavel.</p>
+				</div>
+
+				<form>
+					<div class="content-card">
+						<h2 class="form-section-title">Dados da confirmacao</h2>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="consulta-confirmar">Consulta / Paciente</label>
+									<input type="text" class="form-control" id="consulta-confirmar" placeholder="Informe paciente, protocolo ou CPF">
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+									<label for="data-consulta">Data da consulta</label>
+									<input type="date" class="form-control" id="data-consulta">
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="form-group">
+									<label for="hora-consulta">Hora da consulta</label>
+									<input type="time" class="form-control" id="hora-consulta">
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="canal-confirmacao">Canal de confirmacao</label>
+									<select class="form-control" id="canal-confirmacao">
+										<option>Telefone</option>
+										<option>WhatsApp</option>
+										<option>Email</option>
+										<option>Presencial</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="hora-confirmacao">Horario da confirmacao</label>
+									<input type="time" class="form-control" id="hora-confirmacao">
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="confirmado-por">Confirmado por</label>
+									<select class="form-control" id="confirmado-por">
+										<option>Recepcao</option>
+										<option>Assistente</option>
+										<option>Paciente (auto confirmacao)</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="obs-confirmacao">Observacoes</label>
+							<textarea class="form-control" id="obs-confirmacao" rows="4" placeholder="Registre detalhes relevantes da confirmacao."></textarea>
+						</div>
+						<div class="form-actions clearfix">
+							<a href="index.html" class="btn btn-default">Voltar</a>
+							<button type="button" class="btn btn-primary pull-right">Salvar confirmacao</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="../../../assets/vendor/js/bootstrap.min.js"></script>
+	<script src="../../../assets/js/modules.js"></script>
+</body>
+</html>
